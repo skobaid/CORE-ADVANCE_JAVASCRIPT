@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrototypeObject</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Prototype Object</h1><br>")
+        //It will Return Object Prototype
+       // console.log(Object.prototype);
+        var b = {};
+        console.log(Object.getPrototypeOf(b));
+        console.log(Object.getPrototypeOf(Object.prototype));
+
+        //....How Prototype Works in Javascript...........//
+        document.write("<h2><hr>How Prototype Works in Javascript</h2>");
+
+         function Mobile()
+         {
+            
+         }
+        document.write(Mobile);
+        console.log(Mobile.prototype);
+
+        var lg =new Mobile();
+        console.log(lg.__proto__);
+
+        //verify
+        console.log(lg.__proto__==Mobile.prototype);
+    </script>
+</body>
+</html>

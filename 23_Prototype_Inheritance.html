@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Prototype Inheritance</h1><br>")
+
+        //Super Class//
+        var Mobile = function()
+        {
+            //samsung.call(this);
+            this.a = 10;
+        };
+
+        Mobile.prototype.z= 30;
+
+        //Sub Class/
+
+        var samsung = function()
+        {
+            Mobile.call(this); //Calling Parent Class//
+            this.b = 20;
+        };
+
+        //Prototype Inheritance
+        samsung.prototype = Object.create(Mobile.prototype);
+        samsung.prototype.constructor = samsung; 
+
+        var s =new samsung();
+        var m= new Mobile();
+        document.write(s.a,"<br>");
+        document.write(s.b,"<br>");
+        document.write(s.z,"<br>");
+
+
+        document.write("<hr>");
+        document.write(m.a,"<br>");
+        document.write(m.b,"<br>");
+        document.write(m.z,"<br>");
+    </script>
+</body>
+</html>

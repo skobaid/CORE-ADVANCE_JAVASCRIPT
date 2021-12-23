@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+    <h1>Local Storage </h1>
+
+    <script>
+        //setItem(key,value)
+        // window.localStorage.setItem('username','OBAID');
+        // window.localStorage.setItem('Email','skobaid313@gmail.com');
+        // window.localStorage.setItem('Mob No','8007821505');
+        // console.log(localStorage.length);
+
+        //getItem(n)
+        console.log(localStorage.getItem("username"));
+        console.log(localStorage.getItem("Email"));
+        console.log(localStorage.getItem("Mob No"));
+
+        //For getting key Value
+        console.log(localStorage.key(0));
+        console.log(localStorage.key(1));
+        console.log(localStorage.key(2));
+
+        //For removing item from localStorage
+        localStorage.removeItem("Mob No");
+
+    </script>
+</body> 
+</html>
+<!-- 
+    Local Storage :=>
+        It is read only property of window object.It stores data in aweb browser specifically to the domain and
+        protocol.
+        It does not get to the server as it is stored locally in the web browser with no expiration date.
+        The data will not be deleted when the browser is closed  and reopen.
+
+        syntax=> window.localStorage
+        Methods=>
+        1)setItem(key,value):=>It Allows to add a key/value pair to the storage object.
+        if the key already exists, the name value will overwrite the old value.
+
+        2)getItem(key):=>It returns the value of item that is set with the given key.
+
+        3)key(n):=>It returns the key of the item in the storage object at the nth index which can be useful
+        for looping.
+     -->

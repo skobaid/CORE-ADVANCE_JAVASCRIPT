@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResizingWindows</title>
+</head>
+<body>
+    <h1>Resizing Windows</h1>
+    <button type="button" id="openbtn">Open Window</button>
+    <button type="button" id="resizebtn">Resize Window</button>
+
+    <script>
+        var openwindow = document.getElementById("openbtn");
+        var resizewindow = document.getElementById("resizebtn");
+
+        var newwindow
+        function open_window()
+        {
+            newwindow = window.open("","_blank", "Width= 300, height=300");
+            newwindow.document.write("This is new window...");
+        }
+
+        function resize_window()
+        {
+            
+            // newwindow.resizeBy(300,300);
+            newwindow.resizeTo(100,100)
+
+
+            newwindow.focus();
+        }
+
+        openwindow.addEventListener("click",open_window);
+        resizewindow.addEventListener("click", resize_window);
+    </script>
+</body>
+</html>
+<!-- 
+    resizeBy();-This is used to resize the current window by a certain amount,relative to it's current size.
+    syntax:-window.resizeBy(width,height);
+
+    resizeTo():=>This is used to resizes a window to the specified width and height;
+    syntax:-window.resizeTo(width,height);
+ -->

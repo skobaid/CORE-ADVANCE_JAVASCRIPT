@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMLTableRowElement</title>
+</head>
+<body>
+
+    <table border="5" id="mytable">
+        <caption>It's My Table Caption</caption> 
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>course</th>
+            </tr>
+        </thead>
+        <tbody id="mybody">
+            <tr>
+                <td>101</td>
+                <td>Obaid</td>
+                <td>Javascript</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Affan</td>
+                <td id = "mytd" >Python</td>
+            </tr>
+            
+        </tbody>
+         <tfoot>
+            <tr>
+                <td>103</td>
+                <td>Awais</td>
+                <td>Django</td>
+            </tr>
+        </tfoot> 
+        </tbody>
+    </table>
+    
+
+    <script>
+        document.write("<h1>HTMLTableRowElement </h1>");
+
+        var table = document.getElementById("mytable");     //Accessing Table
+        var myrow = table.rows;                             //Accessing Table Row
+        //console.log(myrow);
+        console.log(myrow[0].cells.length);       //For finding how many cell present in a row
+        console.log(myrow[0].cells[0]);  
+        console.log(myrow[2].cells.item(0));    //similar like (.cells[0])
+        console.log(myrow[2].cells.namedItem("mytd"));  //Accessing row with the help of td id..
+        console.log(myrow[2].cells[1].innerHTML);
+        //myrow[0].innerHTML = "<tr><td>1001</td><td>Berma</td><td>Kotlin</td></tr> " ;
+        //==========insertCell Method========================//
+
+        //Without Accessing row we can not perform cell methods operations
+        var mytable = document.getElementById("mytable");
+        var row = mytable.rows;       //Here rows is proprety for accessing rows 
+
+        var mycell = row[0].insertCell(3);
+        var mycell2 = row[1].insertCell(3);
+        var mycell3 = row[2].insertCell(3);
+        var mycell4 = row[3].insertCell(3);
+
+        console.log(mycell);
+        mycell.innerHTML = "Phn_No";    //(U can write textContent Instead of .innerHTML)
+        mycell2.innerHTML = "78945";
+        mycell3.innerHTML = "45625"; 
+        mycell4.innerHTML = "12365";
+
+       // row[0].deleteCell(01);        //For Deleting Cells
+
+       
+        
+    </script>
+</body>
+</html>
+<!-- 
+    HTMLTableRowElement=>This interface provides special properties and methods for manipulating the layout
+    and presentation of row in an html table..
+
+    Insertrow():=> This method insert a new row in the table and returns a refrence to the new row.
+    Syntax => var row = HTMLTableElement.insertRow(index = -1);
+
+    insertCell():=> This method is used to insert a new cell into a table row and returns a refrence to the cell.
+    Syntax:==>
+    var cell = HTMLTableElement.insertCell(index = -1);
+
+    deletecell():==> This method is used to remove the cell at given position in the row. if the gieven
+    postion is greater than the amount of cell int the row  or is similar than 0 . it raise a dom exception
+    with the IndexSizeError value..
+
+
+   -->

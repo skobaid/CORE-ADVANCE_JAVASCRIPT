@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer_HTML</title>
+</head>
+<body>
+    <div id="mydiv">  
+        <ul id="myul">
+            <li>Affan</li>
+            <li>Awais</li>
+            <li>Aamir</li>
+            <li>Salman</li>
+        </ul>
+    </div>
+
+    <script>
+        document.write("<h1>OuterHtml</h1>");
+
+        var div = document.getElementById("mydiv");
+        var ul = document.getElementById("myul");
+        ul.outerHTML = "<p>This is Paragraph in OuterHTML</p>";
+        console.log(ul);
+    </script>
+</body>
+</html>
+<!--
+    the outer html is the html of an element including the element itself. Use the oute HTML when u want to
+    completely replace an element and its contents. Use innerHTML when u only  want to replace the contents 
+    of the element..
+-->

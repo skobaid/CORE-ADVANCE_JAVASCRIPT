@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Node Element</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>How to Create Element Node</h1>");
+        //Create Element Node
+        //Creating  new h2 Element
+        var new_node = document.createElement("h2");
+        console.log(new_node);
+        document.write(new_node);
+
+        //.......Text Node........................................//
+        document.write("<hr><h1>How to Create Text Node</h1>");
+        var new_txt = document.createTextNode("Text Node created by Javascript");
+        console.log(new_txt);
+        document.write(new_txt.textContent);
+
+        //.................Comment Node........................//
+        document.write("<hr><h1>How To Create Comment Node in Js</h1>");
+        var new_comment = document.createComment("This is Comment Created By Javascript");
+        console.log(new_comment);
+        document.write(new_comment.textContent)
+    </script>
+</body>
+</html>
+<!-- 
+    createElement (element_name)
+    createTextNode(string)
+    createComment(string)
+    createDocumentFragment()
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append in Node</title>
+</head>
+<body>
+    <div id ="myid">
+        <h1 id="myh1">We are learning Js</h1>
+        <h1>OBAID</h1>
+    </div>
+    <section id="mysec">
+
+    </section>
+
+    <script>
+         //Append Existing Element
+        //var myid = document.getElementById("myid");
+        //console.log(myid);
+
+        var mysec = document.getElementById("mysec");
+        var myh1 = document.getElementById("myh1");
+        mysec.appendChild(myh1);
+        console.log(myid);
+        console.log(mysec);
+
+        //Here we Create Node Element  and append it 
+        document.write("<hr><h1>Append Node Element</h1>");
+        //creating  a new Element  Node 2
+
+        var new_node =document.createElement("h2");
+    
+        var targetnode= document.getElementById("myid");
+        targetnode.appendChild(new_node);
+        //targetnode.appendChild(document.createElement("h2")); we can write like this
+        console.log(targetnode);
+    </script>
+</body>
+</html>  

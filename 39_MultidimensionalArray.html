@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiDimensional Array</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>MultiDimesnional Array<h2><br>");
+        //2D Array
+        var data = [
+                        ["Affan","Dell",101],
+                        ["Awais","HP",102],
+                        ["Berma","Lenovo",103]
+                   ];
+
+        for(let i =0; i<3; i++)         //this loop is for Rows
+        {
+            for(let j =0; j<3; j++)     //this Loop is for Column
+            {
+                document.write(i+" " +j+ "  " + " "+data[i][j]+" |")
+            }
+            document.write("<br>");
+        }
+
+        //..........Empty 2D Array................................................//
+
+       /* document.write("<hr>Empty 2D Array <br>")
+
+        //Using Array Literal
+
+       // var data = [ [], [] ]
+
+       //Using Array Constructor
+
+       var data = new Array ( [], [] );
+       for (let i =0; i<2; i++)
+       {
+           for(let j =0; j<2; j++)
+           {
+           document.write(data[i][j] +" ");
+           }
+           document.write("<br>")
+       }*/
+
+       //Using Array Literal
+
+       // var data = [ [], [] ]
+
+       //Using Array Constructor
+
+       var data = [];
+
+       var r= 3;
+       var c= 5;
+       for (var i=0;i<r;i++)
+       {
+           data[i]= [];
+       }
+       for (let i =0; i<r; i++)
+       {
+           for(let j =0; j<c; j++)
+           {
+           document.write(data[i][j] +" ");
+           }
+           document.write("<br>")
+       }
+    </script>
+</body
+</html>
+
+<!--
+    MultiDimensional Array is Arrays of Arrays..
+    it can be 2d,3d , 4d etc..
+-->

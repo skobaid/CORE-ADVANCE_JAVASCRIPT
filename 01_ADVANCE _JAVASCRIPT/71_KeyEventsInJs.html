@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyEvents</title>
+</head>
+<body>
+    <h1>Key Events In Javascript</h1>
+    Name :- <input type="text" name="" id="myinput">
+    <script>
+        key = document.getElementById("myinput");
+        function key_Event(e)
+        {
+            key.style.backgroundColor = "red";
+            console.log(e.type +"        " +  e.keyCode +"          "+ String.fromCharCode(e.keyCode));
+        }
+        key.addEventListener("keydown",key_Event,false);
+        key.addEventListener("keyup",key_Event,false);
+        key.addEventListener("keypress",key_Event,false);
+    </script>
+</body>
+</html>
+<!-- 
+    .keydown=>it fires as a key is pressed.
+
+    .keypress=>it fires after a key is pressed down .It only works with printable characters..
+
+    .keyup=> it fires as the key is released ..
+
+    .
+ -->

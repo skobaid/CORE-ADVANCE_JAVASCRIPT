@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Node Parent Element</title>
+</head>
+<body >
+    <h1 id="myid" class="myclass">We Are Learning Javascript <!--This is Comment--></h1>   
+    <p id="myid1">
+        This is Paragraph
+    </p>
+
+    <script>
+        document.write("<h1>Parent Node And parent Element</h1>");
+        var result = document.getElementById("myid");
+        
+        console.log(result.parentNode);
+        console.log(result.parentElement);
+
+        document.write(result.parentElement);
+        document.write("<br>" + result.parentNode )
+    </script>
+</body>
+</html>
+
+<!--
+    parentNode:
+The parent node property is read only property which returns us the name of the parent node of the 
+selected node as a node object. The Node object represents a single node in the document tree and a node can
+ be an element node, text node or more.
+Syntax:=> node.parentNode
+
+parentElement:
+The parent element is read only property which returns the parent element of the selected element.
+The element object represents an HTML element, like P, DIV, etc.
+Syntax:=> node.parentElement
+-->

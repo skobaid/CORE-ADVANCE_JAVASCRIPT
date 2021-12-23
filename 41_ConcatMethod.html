@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concat_Method</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>Concat Method <br></h2>");
+
+        var names = ["Affan","Basil","Aamir"];
+        for(value of names)
+        {
+            document.write(value +"<br>");
+        }
+        document.write("<hr>")
+
+        var names2 = ["Rizwan","Awais", "Bala"];
+        for (value2 of names2)
+        {
+            document.write(value2+ "<br>");
+        }
+
+        document.write("<hr>Concat Array<br><br>")
+
+        var new_names= names.concat(names2);
+
+        for(value of new_names)
+        {
+            document.write(value+"<br>")
+        }
+
+        //...........Join method.................................//
+
+        document.write("<hr><h1>Join() Method<br></h1>")
+        //Join method joins the elements of array into string,and returns string..
+
+        var data = ["Affan","Awais","Aamir"];
+        document.write(data+"<br>");
+
+        document.write("After join() <br>");
+        var new_data = data.join(" / ");    //It Will Return string
+        document.write(new_data);
+
+        //............Reverse Method in An Array.....////////
+        document.write("<hr><h1>Reverse Method<h1><br>");
+        var data= ["Affan","Salman","Aamir"];
+        document.write(data);
+        data.reverse();
+        document.write("<br>"+data);
+
+
+    </script>
+
+
+</body>
+</html>
+
+<!--
+    Syntax for concat Array Method
+
+    var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
+-->

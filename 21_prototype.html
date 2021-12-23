@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Prototype<br></h1>")
+
+        var Mobile = function(model_no){
+            this.model = model_no;      //Instance Member
+            this.price = 3500;
+            this.data = function(){
+                document.write(this.model," Price:- ",this.price," ",this.color)
+            };
+        }
+
+        var samsung = new Mobile('Galaxy');
+        var nokia = new Mobile('3310');
+       
+        Mobile.prototype.color = 'White';   //Prototype Member
+        //samsung.color = 'white';  //for single single object
+        //nokia.color = 'white';
+        
+        console.log(samsung);
+        console.log(nokia);
+        
+        document.write(samsung.color,"<br>")
+        document.write(samsung.color,"<br>")
+        
+        document.write(Object.keys(samsung),"<hr>");   //We can't See prototype member in this method
+
+        for(var specs in samsung)       //we can Access prototype in this method
+        {
+            if(typeof samsung[specs]!=='function')
+            document.write(" ",samsung[specs]);
+
+        }
+        
+        //samsung.data();
+        //document.write(samsung.model);
+        //document.write(nokia.model);
+        
+        
+    </script>
+</body>
+</html>

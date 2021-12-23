@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent</title>
+    <style>
+       
+       #p
+        {
+            float: left;
+            margin-top: 3px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <p id="p"></p>
+
+    <p id="myp">This is<span>Para</span><em>Graph</em></p>
+    <div class="game">
+    </div>
+    <div class="game-super">
+    </div>
+    <ul id="myul">
+        <li class="one"> First</li>
+        <li class="two">Second</li>
+        <li class="three"> Third</li>
+        <li class="four">Fourth</li>
+        <li class="fifth"> Fifth</li>
+        <li class="six">Sixth</li>
+    </ul>
+    
+    
+    <script>
+    document.write("<h1>textContent</h1>");
+    var np = document.getElementById("p");
+    var p = document.getElementById("myp");
+    
+    console.log(p.textContent);
+    np.textContent = " Down pay (Rs): "; //This is only for text not for html
+    
+
+    p.innerHTML = " <input type=number>"
+    console.log(p);
+
+  //=======================DOM CSS MAPPING================//
+  document.write("<hr><h1>DOM CSS MAPPING</h1>")
+   var div = document.getElementsByClassName("game");
+   var list = document.querySelectorAll('[class ~= "game"]'); //retrun class whose name is game
+   var list = document.querySelectorAll('[class |= "game"]'); //retrun class whose name start with game
+   //( ^= , $=(Used for fnding in ending) , *=())
+   console.log(list);
+
+   //===================pseudo Class===========================
+   var list2 = document.querySelectorAll('li:first-child');     //(for all document child write (' :first-child'))
+   var list3 = document.querySelectorAll('li:last-child');      //(for all document last-child write (' :last-child'))
+   console.log(list2);
+   console.log(list3);
+
+   //========nt Child=====
+
+   var ntchild = document.querySelectorAll('li:nth-child(3)'); //It start Count from first
+//    var ntchild = document.querySelectorAll('li:nth-child(even)');
+//    var ntchild = document.querySelectorAll('li:nth-child(odd)');
+   console.log(ntchild);
+
+   //=========nth Last Child==========
+   var last = document.querySelectorAll('li:nth-last-child(2)'); //It counts from last
+   console.log(last);
+
+   //=======Empty============
+
+   var em = document.querySelectorAll(':empty');
+   console.log(em);
+
+    </script>
+</body>
+</html>
+<!-- 
+    textContent:=>
+    this property represnts the next content of a node and its descendants. In other words, The textContent
+    property sets or returns the text content of the specified node , and all its decendants..
+ -->

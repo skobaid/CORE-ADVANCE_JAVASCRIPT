@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+        <script>
+                // Closure// Nested function
+
+                document.write("Variable Hoisting<br>")
+            function disp()
+            {
+                var j = "This is Local Variable of outer function";  
+                document.write(j)          
+                function inner()
+                {
+                    var k = "This is local variable of inner function";
+                    document.write("<br>",k);
+                    document.write("<br>getting from outer"+j)  // this is making closure 
+                }
+                inner();
+            }
+            disp();
+
+            //.................................................................//
+            // Function Expression:- Assign a function in variable 
+            document.write("<hr>Function Expression<br>")
+
+            var display = function my_fun(){
+                    document.write("hiiiiiiiiiiiii")
+            };
+            display();
+        </script>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Inheritance</h1><br>");
+        class Father
+        {
+               showfmoney()
+               {
+                   return "Father Money...<br>";
+               }
+        };
+
+        class Son extends Father
+        {
+               showsmoney()
+               {
+                   return "Son Money...";
+               }
+        };
+
+        class Gson extends Son
+        {
+            showgmoney()
+            {
+                document.write("<br><h3>GRAND SON ......</h3>");
+            }
+        }
+
+       var f =new Father();
+       var s=new Son();
+       var g=new Gson();
+       document.write(g.showfmoney ());
+       document.write(g.showsmoney ());
+       document.write(g.showgmoney());
+    </script>
+</body>
+</html>

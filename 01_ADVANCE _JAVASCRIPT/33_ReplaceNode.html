@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace_Node</title>
+</head>
+<body>
+    <ul id="myul">
+        <li id="itm2">item 1</li>
+        <li>item 2</li>
+        <li id="itm3">item 3</li>
+        <li id="itm4">item 4</li>
+    </ul>
+    <span id="myspan">This is Span</span>
+
+    <script>
+        document.write("<h1>Replace_Node</h1>");
+
+        //create new node/child  element
+        var new_child = document.createElement("li");
+        new_child.textContent = "Replaced item3";
+
+        var parent = document.getElementById("myul");
+        var target = document.getElementById("itm3");
+
+       var replaced=  parent.replaceChild(new_child, target);
+       console.log(replaced);
+       document.write("Replaced Node = " + replaced.textContent);
+
+//.................................Replacing With Existing Node................................................//
+      
+document.write("<hr><h1>Replace with Existing Node</h1>");
+
+       var span =document.getElementById("myspan");     //Access Existing Node
+       target_replace = document.getElementById("itm4") //access Target node which u want to replace
+
+       existing_replace = parent.replaceChild(span, target_replace);
+       console.log(existing_replace);
+       document.write("Replaced Node = " + existing_replace.textContent);
+
+       console.log(span.firstChild.length);
+    </script>
+</body>
+</html>
+<!--
+    Replace Node is used to replace a node with new node..
+    The new node could be an existing node in the document, or you can create a new node..
+    it will destroy the content of the node that are replaced.
+    it returns Replaced node.
+
+    syntax:=> var replacedNode = parentNode.replaceChild(newChild,Oldchild);
+-->

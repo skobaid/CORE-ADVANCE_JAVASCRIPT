@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsertAdjacent_Element</title>
+</head>
+<body>
+    <div id = "mydiv">
+        <h1 id="myh1"> Heading 1 </h1>
+        <h2 id="myh2"> Heading 2 </h2>
+        <h3 id="myh3"> Heading 3 </h3>
+    </div>
+    <script>
+        document.write("<h1>InsertAdjacent_Element</h1>");
+
+        Element = document.getElementById("mydiv");
+        
+        var new_Elm = document.createElement("span");
+        new_Elm.textContent= "This is Span";
+
+        var h2 = document.getElementById("myh2");
+        h2.insertAdjacentElement('afterbegin',new_Elm);
+        console.log(Element);
+        
+    </script>
+</body>
+</html>
+<!--
+    This method insert the specified Element into a given specified position.
+    It return the Element that was inserted, or null, if the insertion is failed.
+    
+    syntax => targetElement.insertAdjacentElement("position", element);
+    where Position = 'afterbegin' // 'beforebegin'// 'beforeend' // 'afterend'ove 
+
+    move hota hai insertAdjacentElement..
+-->

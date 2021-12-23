@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <h1>Callback Function</h1>
+
+    <script>
+        // function show(a)
+        // {
+        //     console.log("This is show function..!" + a);
+        // }
+
+        function geeky(callback)        //here we pass show function as an argument in geeky named as callback
+        {
+            var a = 101;
+            callback(a);
+        }
+
+         //function show as a parameter in geeky  (===Arrow Function====)
+        geeky( (a)=>{console.log("This is show function..!" + a);});
+    </script>
+</body>
+</html>
+<!-- 
+    Callback function is a function (It can be anonymous function, Arrow function) passed into another function
+    as an argument into another function as an argumnet , which is then invoked inside the outer function to
+    complete some kind of routine or action.
+
+    Synchronous:=>
+        It waits for each operation to complete, after that it executes the next operation..
+
+    Asynchronous:=>
+        It never waits for each operation to complete, rather it executes all operations in the first GO only.
+ -->

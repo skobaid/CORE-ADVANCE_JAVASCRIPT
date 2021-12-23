@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObjectDestructuring</title>
+</head>
+<body>
+    <h1>Object Destructuring</h1>
+
+    <script>
+        var course = {
+            coursename : "Javascript",
+            Duration : "SixMonths",
+            Teacher : "Obaid"
+        };
+        //Purana Tareeka
+        // document.write(course.coursename + "<br>");
+        // document.write(course.Duration + "<br>");
+        // document.write(course.Teacher );
+
+        var {coursename:cname,Duration,Teacher} = course;   //Requirement ke hisab se extract kar sakte hai
+        document.write(cname +"<br>");
+        document.write(Duration +"<br>");
+        document.write(Teacher +"<br>");
+
+        //=========//
+        var a,b;
+        ({a,b}={a:10,b:20});
+        //var {a,b=30}={a:15}; //You can give default value
+        console.log( a);
+        console.log(b);
+
+        //============Object Passing to a function==================//
+
+        console.log("Object passing in a function");
+        var course = {
+            coursename : "Javascript",
+            Duration : "SixMonths",
+            Teacher : "Obaid"
+        };
+
+        function Show({coursename,Duration,Teacher})
+        {
+            console.log(coursename);
+            console.log(Duration);
+            console.log(Teacher);
+        }
+        Show(course)
+
+        //=========== Object Returning from a function========
+        console.log("Object return from a function");
+        var course = {
+            coursename : "Javascript",
+            Duration : "SixMonths",
+            Teacher : "Obaid"
+        };
+       
+        var {coursename,Duration,Teacher} = course;  //her we destructure 
+       
+        function rshow(z)
+        {
+            return z;
+        }
+        var x = rshow(course)
+        console.log(coursename);
+        console.log(Duration);
+        console.log(Teacher);
+
+
+        //=========Nested Object Destructing==============//
+
+        console.log("Nested Object Destructuring");
+        var course = {
+            coursename : "Javascript",
+            Duration : "SixMonths",
+            Teacher : "Obaid",
+            student :{stu1 :"Affan",
+                      stu2 : "Aamir"}
+        };
+        var {coursename,Duration,Teacher,student:{stu1,stu2}} = course;  //her we destructure 
+        document.write("<hr>Nested Object Destructuring <br><br>");
+        document.write(coursename +"<br>");
+        document.write(Duration +"<br>");
+        document.write(Teacher +"<br>");
+        document.write(stu1 + "<br>");
+        document.write(stu2);
+    </script>
+</body>
+</html>
+<!-- 
+    ObjectDestructuring:=>
+
+    Object Passing to a function:=>
+
+    Object Returning from a function
+
+ -->

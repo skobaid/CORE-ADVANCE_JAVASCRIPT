@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalize_Method</title>
+</head>
+<body>
+    <div
+    id ="myid">
+       <h1 id="myh1">We are learning Js</h1>
+       <h1>OBAID</h1>
+   </div>
+
+    <script>
+        document.write("<h1>Normalize Method</h1>");
+
+      var target = document.getElementById("myid");
+      
+      //Here we creating Text Nodes
+      target.appendChild(document.createTextNode("Hello"));
+      target.appendChild(document.createTextNode(" I am "));
+      target.appendChild(document.createTextNode("Js"));
+
+      target.normalize();
+      console.log(target);
+      console.log(target.childNodes);
+    </script>
+</body>
+</html>
+<!--
+    This Method removes text nodes, and joins adjacent text nodes so thier will be no adjacent text node..
+    syntax normalize()
+-->

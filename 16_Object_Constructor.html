@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object_Constructor</title>
+</head>
+<body>
+    <h1>Object Constructor</h1>
+
+    <script>
+            //var fees = {};
+            var fees = new Object();        //creating Object
+            fees['Affan'] = 100;
+            fees['salman'] = 150;
+            fees.awais = 120;
+            fees.total=function(){return(100+200);};
+            document.write(fees['salman']);
+            document.write("<br>",fees.awais)
+            document.write("<br>",fees.total())
+
+            // Adding properties
+            document.write("<hr>Adding Properties Dynamically <br>");   
+            fees.basil = 500;
+            console.log(fees);
+            document.write(fees['basil']);
+
+            //Adding Function or method Dynamically
+            document.write("<hr>Adding Method(Function) Dynamically ");
+            fees.count=function(){return(1+2+3);}
+            document.write("<br>",fees.count());
+
+            //Deleting Properties
+            document.write("<hr>Deleting Properties Dynamically ");
+            delete fees.basil;
+            document.write(fees['basil']);
+    </script>
+</body>
+</html>

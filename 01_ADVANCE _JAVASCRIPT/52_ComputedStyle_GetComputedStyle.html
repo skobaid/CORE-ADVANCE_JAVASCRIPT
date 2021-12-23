@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed and getComputed Style</title>
+    <style>
+        h1
+        {
+            color:black;
+            background-color: chartreuse;
+            width: 35%;
+        }
+        .myclass1
+        {
+            font-style: italic;
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <p id="myid" class="myclass1" style="color: chocolate;">
+    This is Para...</p>
+    <script>
+        document.write("<h1>Computed and getComputed Style</h1>");
+        var p = document.getElementById("myid");
+        //(cdo=>Css Declaration object (All Css Property))
+        var cso= window.getComputedStyle(p); 
+        console.log(cso.fontStyle);
+        console.log(cso.fontSize);
+      
+        //===================With the help of style we can do both operation read and write=====================
+        //from this we can't access internal or exter css property but we can assign value 
+        //This property works perfectly in inline css
+        
+        var cs = p.style;
+        //p.style.fontStyle= "inherit";
+        console.log(cs.color);
+    </script>
+</body>
+</html>
+<!-- 
+    Computed Style:=> The computed style is the style actually used in displaying the element, after
+    "stylings" from multiple sources have been applied...
+
+    To Get the values of all css properties for an element you should use window.getcomputedStyle()..
+
+    syntax :=>  window.getComputedStyle(element, pseudoElement);
+Element:=> for which to get the computed style
+pseudoElement:=> A string specifying the pseudo element to match. must be omitted (or null) for regular
+elements. (it is optional)
+
+This is used for read only .....
+ -->

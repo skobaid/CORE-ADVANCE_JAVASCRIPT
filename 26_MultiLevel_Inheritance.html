@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center"> Multi Level Inheritance<hr></h1>
+    <script>
+        
+        var Mobile = function(){
+            this.a = 50;
+        }
+        Mobile.prototype.z= 30;
+
+        var samsung = function(){
+            Mobile.call(this);
+            this.b= 70;
+        }
+
+        var galaxy = function(){
+            samsung.call(this);
+            this.c= 80;
+        }
+
+        samsung.prototype = Object.create(Mobile.prototype);
+        samsung.prototype.constructor = samsung;
+
+        galaxy.prototype = Object.create(samsung.prototype);
+        galaxy.prototype.constructor =galaxy;
+
+        var m =new Mobile();
+        var s =new samsung();
+        var g =new galaxy();
+
+        document.write("<h1>Mobile Can Access<br></h1>")
+        document.write("Mobile:-",m.a,"<br>");
+        document.write("samsung:-",m.b,"<br>");
+        document.write("galaxy:-",m.c,"<br>")
+        document.write("Mobile prototype:-",m.z,"<br>");
+
+        document.write("<hr><h1>Samsung Can Access<br></h1>")
+        document.write("Samsung inherit mobile a:-",s.a,"<br>");
+        document.write("samsung :-",s.b,"<br>");
+        document.write("glaxy:-",s.c,"<br>")
+        document.write("Mobie Prototype:-",m.z,"<br>");
+
+        document.write("<hr><h1>Galaxy Can Access<br></h1>")
+        document.write("galaxy inherit mobile:-",g.a,"<br>");
+        document.write("galaxy inherit samsung:-",g.b,"<br>");
+        document.write("galaxy :-",g.c,"<br>");
+        document.write("Mobie prototype:-",m.z,"<br>");
+    </script>
+</body>
+</html>

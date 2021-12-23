@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextEvent</title>
+</head>
+<body>
+    <h1>Text In Javascript</h1>
+    Name :- <input type="text" name="" id="mytext">
+    
+    <script>
+        txt = document.getElementById("mytext");
+        function key_Event(e)
+        {
+            txt.style.backgroundColor = "red";
+            console.log(e.type +"        " +  e.data);
+        }
+        txt.addEventListener("textInput",key_Event,false);
+    </script>
+</body>
+</html>

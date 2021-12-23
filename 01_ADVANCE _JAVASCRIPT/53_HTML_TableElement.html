@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table_Element</title>
+</head>
+<body>
+    <table border="2" id="mytable">
+        <caption>It's My Table Caption</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>course</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Obaid</td>
+                <td>Javascript</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Affan</td>
+                <td>Python</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>103</td>
+                <td>Awais</td>
+                <td>Django</td>
+            </tr>
+        </tfoot>
+        </tbody>
+    </table>
+    
+    <script>
+        document.write("<h1>HTML Table Element</h1>");
+        var table = document.getElementById("mytable");
+        //=============Caption======================================//
+       
+        var table_caption = table.caption;
+
+        console.log(table_caption);     //Table Caption property 
+        
+        table_caption.innerHTML = "Caption";
+        document.write(table_caption.innerHTML + "<br>");
+
+        //==========tHEad=====================================/
+
+        var thead = table.tHead;
+        console.log(thead);
+        thead.innerHTML = "<tr><th>111 </th><th>Salman </th><th>Kotlin </th></tr> ";
+        document.write(thead.innerHTML + "<br><br>");
+
+        // ===============tfoot===========================
+
+        var tfoot = table.tFoot;
+        console.log(tfoot);
+        tfoot.innerHTML = "<tr><td>112 </td><td>Aakib </td><td>Java </td></tr> ";
+        document.write(tfoot.innerHTML + "<br>")
+
+        //===============tBodies===================
+
+        var body = table.tBodies;
+        console.log(body);
+        document.write(body[0].innerHTML + "<br>")
+    </script>
+
+</body>
+</html>
+<!-- 
+    HTMLTableElement  interface provides special properties and for manipulating the layout and 
+    presentation of tables in an html document..
+
+    === properties ====
+    caption =>  This property represents the table caption. If no caption element is associated with 
+    the table ,it can be null.
+
+    tHead =>it represents the table's <thead> element.Its value can be null if their is no such element.
+    
+    tFoot =>it represents the table's <tfoot> element.Its value can be null if their is no such element.
+
+    rows => It returns a live html coleection of all the rows in the table, including the rows contained
+    within any <thead>,<tfoot>, and <tbody> elements.it is read only
+
+    tBodies=> This read only property return a live HTML collection of the table bodies.
+    the return object is live and allows modifications of it's content.
+
+ -->

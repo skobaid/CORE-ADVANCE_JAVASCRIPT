@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read_Cookies</title>
+    <style>
+        input[type=text] 
+        {
+            margin-left: 10px;
+        }
+        input[type=email]
+        {
+            margin-left: 35px;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Read Cookies</h1>
+
+    <form action="" name="myform" id="myfrm" method="POST">
+        username:-<input type="text" name="name" id="uname" value=""><small id="u_small"></small><br><br>
+        Email:-<input type="email" name="mail" id="passid" value=""><br><br>
+        Language:-<input type="text" name="lang"><br><br>
+        <input type="button"  value="Set Cookie" name="set" onclick="SetCookie()">
+        <input type="button" value="Get Cookie" name="get" onclick="GetCookie()" >    
+    </form>
+
+    <script>
+        
+        function SetCookie()
+        {
+            document.cookie = "Name = " + document.myform.name.value + "; max-age = " + 60*60*24*10;
+            document.cookie = "Email = " + document.myform.mail.value + "; max-age = " + 60*60*24*10;
+            document.cookie = "Language = " + document.myform.lang.value +"; max-age = " + 60*60*24*10;
+        }
+
+        function GetCookie()
+        {
+            var cookiesArray = document.cookie.split(";"); //split array ko todne ke liye use krte
+           
+            for (var i=0; i<cookiesArray.length; i++) 
+            {
+                var valueArray = cookiesArray[i].split("=");
+                if(valueArray[0].trim() == "Name")              //Trim for removing space in name
+                 {
+                     document.myform.name.value = valueArray[1];
+                 }
+                 else if(valueArray[0].trim() == "Email")
+                 {
+                     document.myform.mail.value = valueArray[1];
+                 }
+                 else if(valueArray[0].trim() == "Language")
+                 {
+                     document.myform.lang.value = valueArray[1];
+                 }
+               
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    We can read cookie with document.cookie
+ -->

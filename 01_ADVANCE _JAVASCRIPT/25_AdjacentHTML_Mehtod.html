@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsertAdjacent_Element</title>
+</head>
+<body>
+    <div id = "mydiv">
+        <h1 id="myh1"> Heading 1 </h1>
+        <h2 id="myh2"> Heading 2 </h2>
+        <h3 id="myh3"> Heading 3 </h3>
+    </div>
+    <script>
+        document.write("<h1>InsertAdjacentHTML</h1>");
+
+        //Accessing Parent Node /Div
+        Element = document.getElementById("mydiv");
+        
+        //This is text  (The string to be parsed as HTML or XML and Inserted into the tree)
+      var html = "<span>This is HTML span</span>";
+
+        //insert into div...
+        var h2 = document.getElementById("myh2");
+        h2.insertAdjacentHTML('afterbegin',html);
+        h2.insertAdjacentHTML('beforebegin',html);
+        console.log(Element);
+        
+    </script>
+</body>
+</html>
+<!--
+    This method is used to insert a text as html(Parses the specified text as HTML Or XML)into a 
+    specified Position..
+
+    syntax:=> element.insertAdjacentHTMl('Position', text)
+    (The string to be parsed as HTML or XML and Inserted into the tree)
+
+    copy hota hai insertAdjacentHTML..
+-->

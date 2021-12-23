@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="demo">QuerySelector</title>
+</head>
+<body>
+        <h1>We Are Learning js</h1>
+        <h1>Affan ..........</h1>
+        <h3>Awais</h3>
+            
+            <p class="demo">
+                hello
+                <span class="hello">hii this is Class method</span>
+                <em>world</em><span>youtube</span>
+            </p>
+        
+            <p class="myclass">
+                <span>byee</span>
+                instagram
+            </p>
+        
+            <div>
+                <p>1st p inside div</p>
+                <p class="geek">2nd p inside div</p>
+            </div>
+
+            <p class="hello">How r u..?</p>
+            <div>
+                <span id = "newid">This is is Id Selector</span>
+            </div>
+
+    <script>
+             document.write("<hr><h1>query Selector</h1>");
+            
+             //Element Selector in Js ..It follow first come first get
+             document.write("<h2>Element Selector<br></h2>");
+             var result = document.querySelector("p,h1");   //select Tags
+             document.write(result);
+             console.log(result);
+
+             //Id Selector
+             document.write("<h2>Id Selector<br></h2>");
+             var result = document.querySelector("#newid");     //Select id use #
+             document.write(result);
+             console.log(result);
+
+             //Class Selector
+             document.write("<h2>Class Selector<br></h2>");
+             var result = document.querySelector(".hello");       //Select by Class ,use .
+             document.write(result);
+             console.log(result);
+            
+    </script>
+</body>
+</html>
+
+<!--
+The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
+Note: The querySelector() method only returns the first element that matches the specified selectors. To return 
+all the matches, use the querySelectorAll() method instead.
+
+CSS Selector:=>
+In CSS, selectors are used to target the HTML elements on our web pages that we want to style
+-->

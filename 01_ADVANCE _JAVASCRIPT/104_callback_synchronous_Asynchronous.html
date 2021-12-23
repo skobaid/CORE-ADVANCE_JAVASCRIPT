@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callbackExample</title>
+</head>
+<body>
+    <h1>Synchronous&Asynchronous</h1>
+
+    <script>
+        //Sunchronous
+        function show()
+        {
+            console.log("I am show function");
+        }
+
+        function geeky(callback)
+        {
+            callback();
+        }
+        
+        geeky(show);
+
+        console.log("End..")
+
+        //Asynchronous
+        setTimeout(function show()
+         {
+            console.log("I am Async Show Function..");
+         },5000);       //It will be print after 5second timeout
+
+         console.log("Asynchronous..")
+    </script>
+</body>
+</html>

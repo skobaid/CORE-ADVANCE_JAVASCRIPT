@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Array<br></h1>");
+        //Declaration of array
+        var stu1 = ["Affan","Salman","Saleem","Aamir"];
+        document.write(stu1);
+        document.write("<br>"+typeof(stu1));
+
+        document.write("<h2><hr>Declaration of array</h2>");
+        document.write("<h3>Using array Literal</h2>");
+
+        var names= [];  //Empty Array
+        names [0]= "obaid";
+        names [1]= "affan";
+        names [2]= "awais";
+        names [3]= "salman";
+        document.write(names);
+        
+        document.write("<h2><hr>Declaration of array</h2>");
+        document.write("<h3>Using array Constructor</h2>");
+         var names= new Array("obaid","Salman","faisal","majid");  //Empty Array
+       // names [0]= "obaid";
+        //names [1]= "affan";
+        //names [2]= "awais";
+        //names [3]= "salman";
+        document.write(names);
+//...............modifying Array Elements..................................//
+        document.write("<h2><hr>Modifying Array Element</h2>");
+        var names = ["Aabid","kadir","Fazal"];
+        document.write(names+"<br>");
+        names[0] = "sallu";
+        document.write("After Modify<br>"+names);
+
+        var new_names=names;    //new_names get all the array elements presentin names array..
+        document.write("<hr>New Array<br>"+new_names);
+        
+//.................Removing Array Element..................................................//
+        document.write("<h2><hr>Removing Array Element</h2>");
+        var names = ["Aabid","kadir","Fazal","basil"];
+        
+        document.write(names+"<br>");
+        
+        delete names[0];    
+        
+        document.write("After Deleting<br>"+names+"<br>");
+
+ //................Length Of Array............................................................//
+        document.write("<h2><hr>Array Length Property</h2>");
+        var names = ["Aabid","kadir","Fazal","basil"];
+        l=names.length; //it count length from 1..
+        document.write(l);
+    </script>
+</body>
+</html>
+
+<!--
+Array Are Collection of data items stored Under a Single name..
+
+-->

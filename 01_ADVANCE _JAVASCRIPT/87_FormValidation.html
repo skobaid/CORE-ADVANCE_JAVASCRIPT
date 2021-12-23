@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidation</title>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form action="" name="myform" id="myfrm">
+        username :-<input type="text" name="uname" id="uname" value=""><small id="u_small"></small><br><br>
+        Password :-<input type="password" name="pass" id="passid" value=""><br><br>
+        <input type="submit" name="submit" id="" value="submit" onclick="validate_pass()">
+        <input type="reset" >    
+    </form>
+    
+    <script>
+            //Validation for username
+        function validate_Data()
+        {
+            var pattern = /^([^0-9\W]*)$/;     //regular Expression (0-9 or white space include nahi krna hai)
+            
+            if(pattern.test(document.myform.uname.value))
+            {
+                // document.myform.uname.style.color = 'green';
+                document.getElementById("u_small").textContent = "user is valid";
+                document.getElementById("u_small").style.color = "green";
+            }
+            else
+            {
+                // alert('Plz Do not Enter number and white space');
+                // document.myform.uname.style.color = 'red';
+                document.getElementById("u_small").textContent = "user is invalid"
+                document.getElementById("u_small").style.color = "red";
+            }
+        }
+
+        document.myform.uname.addEventListener("keyup", validate_Data);
+        
+        function validate_pass()
+        {
+            var validate_pass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+            if(validate_pass.test(document.myform.pass.value))
+            {
+                document.write("LoggedIn");
+            }
+            else
+            {
+                alert("password should contain atleast one number and one special character");
+               
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>
+<!-- 
+    for password validation
+    function validatePassword() {
+    var newPassword = document.getElementById('changePasswordForm').newPassword.value;
+    var minNumberofChars = 6;
+    var maxNumberofChars = 16;
+    var regularExpression  = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    alert(newPassword); 
+    if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
+        return false;
+    }
+    if(!regularExpression.test(newPassword)) {
+        alert("password should contain atleast one number and one special character");
+        return false;
+    }
+}
+ -->

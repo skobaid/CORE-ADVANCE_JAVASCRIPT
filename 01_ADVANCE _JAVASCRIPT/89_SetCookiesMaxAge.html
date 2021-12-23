@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetCookiesmaxage</title>
+</head>
+<body>
+    <h1>How to set Cookies Max Age</h1>
+
+    <script>
+        //Set cookie    ()
+        document.cookie = "Name = This is My Cookie; max-age=" +60*60*24*10+"; path = /";
+        alert(document.cookie);
+
+    </script>
+</body>
+</html>
+<!-- 
+    max-age =>It is used to create presistent cookie. It is supported by all modern browsers except IE.
+    It will be destroyed at specific time 
+ -->

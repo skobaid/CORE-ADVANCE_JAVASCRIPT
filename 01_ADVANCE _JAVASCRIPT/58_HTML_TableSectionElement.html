@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Section Element</title>
+</head>
+<body>
+
+    <table border="5" id="mytable">
+        <caption>It's My Table Caption</caption> 
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>course</th>
+            </tr>
+        </thead>
+        <tbody id="mybody">
+            <tr>
+                <td>101</td>
+                <td>Obaid</td>
+                <td>Javascript</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Affan</td>
+                <td>Python</td>
+            </tr>
+            
+        </tbody>
+         <tfoot>
+            <tr>
+                <td>103</td>
+                <td>Awais</td>
+                <td>Django</td>
+            </tr>
+        </tfoot> 
+        </tbody>
+    </table>
+    
+
+    <script>
+        document.write("<h1>HTML Table Section Element </h1>");
+
+        //This is For Partiular Section in table not for whole Table
+        var tbody = document.getElementById("mybody"); //Aceess body
+        
+        var rows  = tbody.rows;     //Rows is property of htmltablesectionElement
+        console.log(rows);      //console.log(rows[0]);
+        
+        //document.write(rows[0].innerHTML + "<br>");
+        document.write(rows[1].innerHTML + "<br>");
+        
+        //Replacing Data of 0 index position
+        rows[0].innerHTML = "<tr><td>1001</td><td>Berma</td><td>Kotlin</td></tr> " ;
+        document.write(rows[0].innerHTML + "<br>"); 
+
+        rows = tbody.insertRow(-1);
+        
+        rows.insertCell().textContent= "1002";
+        rows.insertCell().textContent= "Rohit";
+        rows.insertCell().textContent = "Ruby";
+       
+       // tbody.deleteRow(1);
+    </script>
+</body>
+</html>
+<!-- 
+  HTMLTableSectionElement interface provides special properties and methods for 
+  manipulating the layout and presentation of sections, that is headrs,footers and bodies,in an html table.
+ -->

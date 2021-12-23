@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Properties</title>
+</head>
+<body>
+    <h1 id="myid">We Are Learning Javascript <!--This is Comment--></h1>   
+    <p id="myid1">
+        This is Paragraph
+    </p>
+
+    <script>
+         document.write("<h1>Properties Of Node Object</h1> <br>")
+        //DOCUMENT
+        document.write(".........Document........<br><br>");
+
+        //Properties Of Node Objects
+       
+        document.write(document.nodeName + "<br>");
+        document.write(document.nodeValue + "<br>");
+        document.write(document.nodeType + "<br>")
+        
+        console.log(document.nodeName);
+        console.log(document.nodeValue);
+        console.log(document.nodeType);
+
+         //ELEMENT
+         document.write("<hr>........Element........<br><br>");
+
+         var elm = document.getElementById("myid1"); 
+
+             document.write(elm.nodeName + "<br>");
+             document.write(elm.nodeValue + "<br>");
+             document.write(elm.nodeType + "<br>")
+        
+            console.log(elm.nodeName);
+            console.log(elm.nodeValue);
+            console.log(elm.nodeType);
+
+
+            //Text
+         document.write("<hr>........Text........<br><br>");
+
+            var txt = document.getElementById("myid"); 
+
+                document.write(txt.firstChild.nodeName + "<br>");
+                document.write(txt.firstChild.nodeValue + "<br>");
+                document.write(txt.firstChild.nodeType + "<br>")
+
+            console.log(txt.firstChild.nodeName);
+            console.log(txt.firstChild.nodeValue);
+            console.log(txt.firstChild.nodeType);
+
+            
+            //Comment
+            document.write("<hr>........Comment........<br><br>");
+
+            var cmt = document.getElementById("myid"); 
+
+            document.write(txt.firstChild.nextSibling.nodeName + "<br>");
+            document.write(txt.firstChild.nextSibling.nodeValue + "<br>");
+            document.write(txt.firstChild.nextSibling.nodeType + "<br>")
+
+            console.log(txt.firstChild.nextSibling.nodeName);
+            console.log(txt.firstChild.nextSibling.nodeValue);
+            console.log(txt.firstChild.nextSibling.nodeType);
+
+            //Changing Content of element
+
+            document.write("<hr> Changing Content <br>");
+            var txt = document.getElementById("myid").firstChild.nodeValue = " This is new Value";
+            document.write(txt);
+
+            
+    </script>
+
+    <!--
+        Nodes are in the DOM aka Document Object model. In the DOM, all parts of the document, 
+        such as elements, attributes, text, etc. are organized in a hierarchical tree-like structure; 
+        consisting of parents and children. These individual parts of the document are known as nodes.
+    -->
+    
+</body>
+</html>

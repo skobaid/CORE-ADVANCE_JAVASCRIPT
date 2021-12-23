@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTMl</title>
+</head>
+<body>
+    <ul id="myul">
+        <li>Affan</li>
+        <li>Awais</li>
+        <li>Aamir</li>
+        <li>Salman</li>
+    </ul>
+    <script>
+        document.write("<h1>.....innerHTML In javascript.....</h1>");
+
+        var parent = document.getElementById("myul");
+        
+        parent.innerHTML = "<li>Android</li><li>Web Development</li><li>Graphic Design</li>";
+        console.log(parent);
+       
+    </script>
+</body>
+</html>
+<!--
+    The Element Property innerHTML gets or sets the HTML Or XMl markup contained within element..
+    Setting the value of innerHTML lets you easily replace the existing contents of an element with new content.
+
+    syntax:=> var content = element.innerHTML;
+              element.innerHTML =htmlString;
+              document.getElementById(id).innerHTML = htmlstring;
+-->

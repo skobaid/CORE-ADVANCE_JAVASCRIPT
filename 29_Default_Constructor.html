@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Default Constructor<br>");  
+        class Mobile
+        {
+               display()
+               {
+                   return "Prototype Member..";
+               }
+        }
+
+        var mi = new Mobile();      
+        document.write(mi.display());
+    //......Parametrized Constructor..................//
+    document.write("<hr>Parametrized Constructor<br>");
+        class Mobiles
+        {
+                constructor(name,price)
+                {
+                    this.a =name;
+                    this.price = price;
+                }
+               display()
+               {
+                   return this.a+" Price Is "+this.price ;
+               }
+        }
+
+        var mi = new Mobiles('Affan_chota'); 
+        var nok= new Mobiles('3310',5000)     
+        //document.write(mi.display());
+        document.write(nok.display());
+
+    </script>
+</body>
+</html>
+
+<!--
+ A constructor is a function that creates an instance of a class which is typically called an “object”.
+  In JavaScript, a constructor gets called when you declare an object using the new keyword.
+
+The purpose of a constructor is to create an object and set values if there are any object properties
+ present. It’s a neat way to create an object because you do not need to explicitly state what to 
+ return as the constructor function, by default, returns the object that gets created within it.
+
+
+-->

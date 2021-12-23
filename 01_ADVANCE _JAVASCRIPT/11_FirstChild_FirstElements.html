@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Child and FirstElement Child</title>
+</head>
+<body>
+    <h1 id="myid">
+        <!--This is Comment--> 
+        <span>We Are Learning Javascript</span><br>
+        <em>Hello</em>
+        </h1>   
+    <p id="myid1">
+        This is Paragraph</p>
+    <p id="myid2">
+        <span>I am Span</span>I am Para..</p>
+    
+        <script>
+            document.write("<h1>First Child And First ElementChild</h1>");
+
+            var result = document.getElementById("myid");
+            document.write(result.firstChild);
+            console.log(result.firstChild); 
+            
+            console.log(result.firstElementChild);
+            result.firstElementChild.textContent  = "We Are learning Dom";
+
+            document.write("<br>" + result.firstElementChild.textContent);
+        </script>
+</body>
+</html>
+
+<!--
+    firstchild Include white spaces ,text,comment
+
+    firstelementChild does not include white spcace ,text, comment
+-->

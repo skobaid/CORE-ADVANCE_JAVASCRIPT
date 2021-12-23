@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substring</title>
+</head>
+<body>
+    <h2 id="myh">Hello Javascript</h2>
+    <p id="myp" title="para" class="myclass">This is Paragraph..</p>
+    <script>
+        document.write("<h1>SubstringData Method</h1>");
+
+        var h= document.getElementById("myh");
+        var result = h.firstChild.substringData(0,3);     //(it takes 0,1 does not include 2 index)
+        console.log(result);     
+    </script>
+</body>
+</html>
+
+<!--
+    This method retrns the part of the current Elements of textNodes and comment Node content from the 
+    specified position with the specified length..
+     syntax:=> TextNode.substringData(start,length);
+
+     For Retrieving specific Length
+-->

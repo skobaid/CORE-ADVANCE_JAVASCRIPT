@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    
+
+    <script>
+        //Functions (How to create and call function in javascript)
+        function my_function()
+        {
+            document.write("This is function Defination <br>")
+        }
+        //calling function
+        
+        my_function();
+        my_function();
+        my_function();
+        my_function();
+        my_function();
+        my_function();
+       
+        //......................................................................//
+        // function with parameter/argument
+        document.write("<hr>Function With Parameter<br>")
+
+        function my_functionf(n)
+        {
+            document.write(n);
+        }
+        my_functionf("Affan..<br>")
+
+        //...........................................................................//
+        //Argument Objects in Javascript
+        document.write("<hr>Arguments in javascript<br>")
+        function add(name,name1)
+        {
+            //arguments[0]="hello"
+            //document.write(arguments[0]+"<br>")
+            //document.write(arguments[1])
+            //document.write("<br>"+arguments.length)
+
+            for( i=0; i<arguments.length; i++)      //arguments.callee return functions information
+            {
+                document.write(arguments[i]+ '...')
+            }
+        }
+        add("awais","salman");
+
+        //.....................................................................................//
+        // functions with too many objects
+
+        document.write("<hr>Functions With too many arguments<br>")
+
+        function many(n,m)
+        {
+            document.write(n+"<br>", m+"<br>", arguments[3]);
+        }
+        many(10,20,30,40);
+
+        //.....................................................................................//
+        // functions with default parameters
+        document.write("<hr>Functions With default arguments<br>")
+        function my_default(a,c=[101,102])            //we can give default only at the end
+        {                                     //js allows us to use null and arrays as default value
+            document.write("A ="+a +"<br>");
+            //document.write("B ="+b +"<br>");
+            document.write("C ="+c[0] +"<br>");
+        }
+        my_default(10)
+
+        //.....................................................................................//
+        //Function with Rest Parameter
+
+        document.write("<hr>Functions With Rest Parameter<br>")
+        function rest_function(a,...args)       //write only at the end 
+        {       
+            document.write(a,"<br>")                                //Rest of parameter will assign in ...args(rest parameter)
+            document.write(args)        //(args[0] we can get value by index number)
+        }
+
+        rest_function(10,20,30);
+
+        //...................................................................................//
+        // Return Statement in js
+
+        document.write("<hr>Return Statement <br>")
+        function add(a,b)
+        {
+            return(a+b);
+        }
+
+        c = add(10,20);
+        document.write(c)
+
+    </script>
+</body>
+</html>

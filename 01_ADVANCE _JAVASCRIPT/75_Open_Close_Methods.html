@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open&Close</title>
+</head>
+<body>
+    <h1>Open and Close Methods</h1>
+    <button type="button" id="btn">Create New Window</button>
+    <button type="button" id="exitbtn">Close Window</button>
+    <script>
+    
+    //var new_window = window.open("https://www.youtube.com/watch?v=07BYO2dCYAE&list=PLbGui_ZYuhihZ-pDxNZuQ7xOQ8IS2z3XI&index=100", "_self", "heigth=100", "width=100");
+    // document.write(new_window);
+    //var new_window =  window.open();
+    //document.write(new_window);
+      
+    // var btn = document.getElementById("btn");
+    //   btn.onclick = function new_window()
+    //   {
+          window.open("https://www.facbook.com", "_blank", "height=300px, width=200px,scrollbars = no");
+    //   }
+
+      var exitbtn = document.getElementById("exitbtn");
+      exitbtn.onclick = function exit_window()
+      {
+          exitbtn.document.close();
+          window.close()
+      }
+      
+     // btn.onclicknew_window);
+    </script>
+</body>
+</html>
+
+<!-- 
+    The open method creates a new secondary browser window , similar to choosing new window from the file menu.
+    
+    Syntax=>window.open(URL, name. features, replace);
+
+    Close Method:=>
+    Once a window is open, the close method is used to close it.It close the current window or window on which
+    it was called .This is only allowed to be called for windows that were opened by a script using the 
+    window.opened by a script using the window.opene(). It is often together with open method .
+
+    Syntax=>window.close();
+ -->

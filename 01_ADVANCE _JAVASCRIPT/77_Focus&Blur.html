@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus&Blur</title>
+</head>
+<body>
+    <h1>Focus And Blur</h1>
+    <button type="button" id="openwindow">Open Window</button>
+    <button type="button" id="focus">Focus</button>
+    <button type="button" id="blurbtn">Blur</button>
+    
+    <script>
+        var newwindow;
+        function open_window()
+        {
+            newwindow = window.open("https://www.w3schools.com/css/css_form.aspM","_blank","width=200, height = 200")
+        }
+
+        function focus_window()
+        {
+            newwindow.focus();
+        }
+
+        function blur_window()
+        {
+            newwindow.blur();
+        }
+
+        document.getElementById("openwindow").addEventListener("click",open_window);
+        document.getElementById("focus").addEventListener("click",focus_window);
+        document.getElementById("blurbtn").addEventListener("click",blur_window);
+    </script>
+</body>
+</html>

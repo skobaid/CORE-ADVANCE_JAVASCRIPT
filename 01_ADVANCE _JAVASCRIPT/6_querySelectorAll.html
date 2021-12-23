@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="demo">QuerySelector_All</title>
+</head>
+<body>
+        <h1>We Are Learning js</h1>
+        <h1>Affan ..........</h1>
+        <h3>Awais</h3>
+            
+            <p class="demo">
+                hello
+                <span class="hello">hii this is Class method</span>
+                <em>world</em><span>youtube</span>
+            </p>
+        
+            <p class="myclass">
+                <span>byee</span>
+                instagram
+            </p>
+        
+            <div id="show">
+                <p>1st p inside div</p>
+
+                <p class="geek">
+                    <span class="myspan">More Specific</span>
+                </p>
+                <span>Hello.......</span>
+                <p class="geek">2nd p inside div</p>
+            </div>
+
+            <p class="hello">How r u..?</p>
+            <div id="newshow">
+                <span id = "newid">This is is Id Selector</span>
+                <h3 id="new">This is heading </h3>
+            </div>
+
+            <div>
+                This is Div,,,
+            </div>
+
+    <script>
+             document.write("<hr><h1>query Selector All</h1>");
+            // QuerySelector_All  ,It return Node List
+            document.write("<h2>Element Selector method<h2>");
+            var result = document.querySelectorAll("p,#newid");
+            document.write(result);
+            console.log(result);
+  
+            document.write("<hr><h2>Class Selector method<h2>");
+            var result = document.querySelectorAll(".myclass");
+            document.write(result);
+            console.log(result);
+
+            document.write("<hr><h2>Id Selector method<h2>");
+            var result = document.querySelectorAll("#newid"); //u can Pass Multiple id's
+            document.write(result);
+            console.log(result);
+
+            document.write("<hr><h2>Attribute Selector method<h2>");
+            var result = document.querySelectorAll("div[id]");
+            var res2 = document.querySelectorAll("div[id='show']");
+            document.write(result);
+            console.log(result);
+
+            document.write("<br>" + res2);
+            console.log(res2);
+
+
+            //......QuerySelectorAll More Specific Method...................//
+            document.write("<hr><h2>Query Selector More Specific method<h2>");
+            //var data = document.getElementById("show");
+            //console.log(data);
+            //var result = data.querySelectorAll("span.myspan");
+            //var result = document.getElementById("show").querySelectorAll("span.myspan"); we can also write like this
+            var result = document.querySelectorAll("#show > .geek > span.myspan");
+            document.write(result);
+            console.log(result);
+
+            //........QuerySelectorAll Method with Lenght property..............//
+
+            document.write("<hr><h2>Query Selector All Method with Length property<h2>");
+            var result = document.querySelectorAll("p").length;
+            document.write(result);
+            console.log(result);
+
+            var data = document.querySelectorAll(".demo");
+            var res = data.length;
+            document.write("<br>"+ data);
+            document.write("<br>"+res);
+            console.log(res);
+ 
+            //........QuerySelectorAll Method with Loop.............//
+
+            document.write("<hr><h2>Query Selector All Method Loop<h2><br>");
+            var data = document.querySelectorAll("p");
+            var len = data.length;
+
+            for(let i=0; i<=len; i++)
+            {
+               // var result = document.querySelectorAll("p")[i];
+                document.write( " "+ result + "<br>");
+                document.write(i +" =>");
+                console.log(result);
+                   var result = data[i];
+                
+            }
+  
+    </script>
+</body>
+</html>
+

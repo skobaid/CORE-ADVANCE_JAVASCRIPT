@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage</title>
+</head>
+<body>
+    <h1>Session Storage</h1>
+
+    <script>
+        //setItem(key,value); (For Setting Session )
+        // window.sessionStorage.setItem("name","OBAID");
+        // window.sessionStorage.setItem("email","skobaid313@gmail.com");
+        // window.sessionStorage.setItem("phn","8007821505");
+        // console.log(sessionStorage);
+
+        //getItem(key);
+        console.log(sessionStorage.getItem("name"));
+        console.log(sessionStorage.getItem("email"));
+        console.log(sessionStorage.getItem("phn"));
+
+         sessionStorage.removeItem("phn");
+
+        console.log(sessionStorage.key(1)); //for getting key value
+        console.log(sessionStorage.key(2));
+        console.log(sessionStorage.key(3));
+
+        sessionStorage.clear();     //For Clearing All Session Data
+        
+    </script>
+</body>
+</html>
+
+<!-- 
+    Session Storage=>
+        It is read only property of window object.It stores data in aweb browser specifically to the domain and
+        protocol for a particular session.
+        It doesn't sent to the server.
+        Data stored in a sessionStorstorage gets cleared when the page session ends.
+        A page session lats for as long as the browser is open and survives over page reloads and restores.
+
+        syntax=>
+            window.sessionStorage
+
+            Methods;=>
+            1)setItem(key,value);
+            2)getItem(key);
+            3)removeItem(key);
+ -->

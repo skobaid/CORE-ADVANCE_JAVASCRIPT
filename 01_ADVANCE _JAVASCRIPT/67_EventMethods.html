@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Methods</title>
+    <style>
+        #one
+        {
+            height: 600px;
+            width: 600px;
+            background-color:gray;
+        }
+        #two
+        {
+            height: 500;
+            width: 500px;
+            background-color: cornflowerblue;
+        }
+        #three
+        {
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Event Methods</h1>
+    
+    <div id="one" data-name="1">1
+        <div id="two" data-name="2">2
+            <div id="three" data-name="3">3
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function div1(e)
+        {
+            this.style.backgroundColor = "red";  //This target krta hai current target ko
+        }
+
+        function div2(e)
+        {
+            this .style.backgroundColor="blue";
+            e.stopImmediatePropagation(); 
+        }
+
+        function div2_2(e)
+        {
+            this .style.width = "550px";
+           
+        }
+
+        function div3(e)
+        {
+            this .style.backgroundColor = "green";
+             e.stopPropagation();              //when click on thre it will show only itslef target not to target parents
+        }
+
+        var divone = document.getElementById("one");
+        var divtwo = document.getElementById("two");
+        var divthree = document.getElementById("three");
+        
+        divone.addEventListener("click",div1,false);
+        divtwo.addEventListener("click",div2,false);
+        divtwo.addEventListener("click",div2_2,false);
+        divthree.addEventListener("click",div3,false);
+               
+
+        
+
+    </script>
+</body>
+</html>
+<!-- 
+    Event Methods:=>
+    stopPropagation()-prevents further propagation of the current event in the capturing and bubbling phase.
+    stopImmediatePropagation=>Prevents other listeners of the same event from being called. 
+ -->

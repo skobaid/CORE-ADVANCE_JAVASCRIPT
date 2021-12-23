@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove_Node</title>
+</head>
+<body>
+    <ul id="myul">
+        <li id="itm2">item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <div id="mydiv">
+
+    </div>
+
+    <script>
+        document.write("<h1>Remove Node</h1>");
+        //How to Remove Node in Javascript.....
+        var ul = document.getElementById("myul");
+        var itm2 = document.getElementById("itm2");
+
+        //var del_Node=  ul.removeChild(ul.firstElementChild); without Accessing Target Id (childNodes[2])
+        var del_Node=  ul.removeChild(itm2);
+        console.log(ul);  
+        console.log(del_Node);
+        
+    </script>
+</body>
+</html>
+<!--
+    This method is Used to remove /delete nodes from tree.the removed child still exist in memory, but is 
+    no longer part of the dom.
+    Syntax:=> parentNode.removeChild(target_Node);
+-->

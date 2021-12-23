@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    <h1>Add Event Listner in Js</h1>
+
+    <button id="mybtn">Click</button>
+    <script>
+    btn = document.getElementById("mybtn");
+
+   //btn.addEventListener("mouseover", function(){alert('This is Add Event Listner..');}) //here we uses anonymous function
+
+    //===========overwrite ko overcome karege=========
+
+    function disp1()
+    {
+        alert("This is Function1 ");
+    }
+
+    function disp2()
+    {
+        alert("This is Fucntion2");
+    }
+
+    btn.addEventListener("click",  disp1);
+    btn.addEventListener("click",  disp2);
+    </script>
+</body>
+</html>
+
+<!-- 
+    This method is introduced by DOM2, used to engage an event handler in a page..
+    Syntax=> object.addEventListner(event, handler, capturePhase).
+
+    where Object= is the node to which the listner is to be bound.
+    Event = is a string indicating the type of event.
+    Handler= is the function that should be called when the event occurs.
+    capturePhase = it is optional ..
+
+    Why should we use this addEventListner=======>
+    It Allows u to bind multiple handlers to an object for the same event.
+
+ -->

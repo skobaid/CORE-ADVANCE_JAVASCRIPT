@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseEvent</title>
+</head>
+<body>
+    <h1>Mouse Event in Js</h1>
+    <div id="one" style="width:100px; height:100px; background-color: red;">
+        <div id="two" style="width: 50px;height: 50px; background-color: blue;">
+        </div>    
+    </div>
+    <div style="margin-top: 10px;">
+        Name:- <input type="text" id="mytext">
+        Number:- <input type="text" id="mytext">
+    </div>
+    <script>
+        function div(e)
+        {
+            console.log(e.type);
+            
+        }
+        function div2(e)
+        {
+            console.log(e.type);
+        }
+        var divone = document.getElementById("one");
+        var divtwo = document.getElementById("two");
+
+        // divtwo.addEventListener("mousedown",div,false);
+        // divtwo.addEventListener("mouseup",div,false);
+        // divtwo.addEventListener("click",div,false);
+        // divtwo.addEventListener("dblclick",div,false);
+        // divtwo.addEventListener("mouseenter",div,false);
+        // divtwo.addEventListener("mouseleave",div,false);
+        // divtwo.addEventListener("mouseover",div,false);
+        // divtwo.addEventListener("mouseout",div,false);
+        // divtwo.addEventListener("mousemove",div,false);
+        // divtwo.addEventListener("contextmenu",div,false);   // right button
+        //divtwo.addEventListener("click",div2);
+
+        //====Bubling=====
+
+        divtwo.addEventListener("click",div2,false);
+        divone.addEventListener("click",div,false);
+        divtwo.addEventListener("mousedown",div2,false);
+        divone.addEventListener("mousedown",div,false);
+
+        divtwo.addEventListener("mousemove",div2,false);
+        divone.addEventListener("mousemove",div,false);
+
+        divtwo.addEventListener("mouseout",div2,false);
+        divone.addEventListener("mouseout",div,false);
+
+        divtwo.addEventListener("mouseleave",div2,false);
+        divone.addEventListener("mouseleave",div,false);    //Ye Bubble up nahi hota hai
+
+        //======Code for input box======
+
+        var input_box = document.getElementById("mytext");
+        function color()
+        {
+            input_box.style.backgroundColor = "green";
+        }
+        function changecolor()
+        {
+            input_box.style.backgroundColor = 'red';
+        }
+        input_box.addEventListener("mouseover",color,false);
+        input_box.addEventListener("mouseleave",changecolor,false);
+
+    </script>
+</body>
+</html>

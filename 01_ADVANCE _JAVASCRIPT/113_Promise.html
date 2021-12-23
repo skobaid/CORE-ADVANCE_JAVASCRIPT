@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Promise</h1>
+
+    <script>
+        // //Basic Example (Produce code)
+        // const npromise = new Promise ((resolve,reject)=>
+        // {
+        //     let req = true ;
+        //     if (req == true)
+        //     {
+        //         resolve("Request Success");
+        //     }
+        //     else
+        //     {
+        //         reject("Rejected for some reason..");
+        //     }
+        // }
+        // );
+        // //(Consume code)
+        // npromise.then(
+        //     (value) =>{console.log(value)},
+        //     (error) =>{console.log(error)},
+        // );
+
+        //=====produce code and consume code in one code (Promise Catch)
+        // const npromise = new Promise ((resolve,reject)=>
+        // {
+        //     let req = true ;
+        //     if (req == true)
+        //     {
+        //         resolve("Request Success");
+        //     }
+        //     else
+        //     {
+        //         reject("Rejected for some reason..");
+        //     }
+        // }
+        // ).then(
+        //     (value) =>{console.log(value);},
+        //     // (error) =>{console.log(error)},  We can use catch instead of this
+        // ).catch((error)=>{console.log(error);})
+
+        //============Chaining Method=============//
+        // const primiseObj1 = new Promise((resolve,reject)=>
+        // {
+        //     let  num =10;
+        //     resolve(num);
+        // }
+        // ).then(
+        //     (value)=>{console.log("Request Success....."+ value);
+        //         return value +10;
+        //     }
+        // ).then(
+        //     (value)=>{console.log(value);}
+        // )
+        
+        //=============Finally Method===================//(Finally resolve,reject dono case chalega hi..)
+
+        const npromise = new Promise ((resolve,reject)=>
+        {
+            let req = true ;
+            if (req == true)
+            {
+                resolve("Request Success");
+            }
+            else
+            {
+                reject("Rejected for some reason..");
+            }
+        }
+        ).then(
+            (value) =>{console.log(value);},
+            // (error) =>{console.log(error)},  We can use catch instead of this
+        ).catch(
+            (error)=>{console.log(error);}
+        ).finally(
+            (code)=>{console.log("Finally Block");}
+        )
+
+    </script>
+</body>
+</html>
+<!-- 
+    Promise:=> It is an Object representing the eventual completion or failure of an asynchronous operation.
+    Promise Object contains the both the producingm code and calls to the consuming code. It can be used to
+    deal with Asynchronous operation in js.
+
+    Promise State:=>
+        Pending-Initial State, Not yet Fulfilled or Rejected
+        Fulfilled/Resolved-promise Completed
+        Rejected-promise FailedSS
+
+    Creating Promise=>
+        Promise(); This is created using  the new keyword and its constructor. This cponstructor takes a
+        function called the "executor function" as it's parameter.
+
+    const promiseObj = new promise((resolve,reject)=>
+    {
+        Do Asynchronous Operration
+        Resolve (value)
+        reject (Error)
+    })
+
+    Function Returning promise
+    functon myfunction()
+    {
+        retrn new promise((resolve,reject)=>
+    {
+        Do Asynchronous Operration
+        Resolve (value)
+        reject (Error)
+    }))
+    }
+
+    then Method()
+    This method is return promise.It take two argumnets:callback funciton for the success and the failure 
+    cases of the promise. As then method returns a promise se we can do method chaining.
+
+    Syntaxt:=>then(onResolved,OnRejected)
+    
+    onResolved = A function call if the promise is fulfilled. This function has one argumnet, the fulfillment
+    value.
+    promiseObj.then(value=>
+    {
+        console.log(value);
+    },                                 //Consming Code
+    Error=>
+    {
+        console.log(error);
+    }
+    );
+
+    OnRejected :=>
+    A function call if the promise is rejected. This fucntion has one argument, the rejection reason.
+
+    ====Chaining=========
+    The then method retruns promise which allows for method chaining. If the fucntion passed as handler 
+    to then return a promise, an equivalent promise will be exposed to the subsequent then in the method
+    chain.
+
+    catch():=>It returns a promise and desals with rejected case only. It behaves the same as then, 
+    It is used for error handling in promise compostition .
+
+    syntax:=> catch(callback)
+
+    finally ():It returns a promise .when promise is settled, i.e either fulfilled or rejected,
+    the specified callback function is executed.
+
+    Syntax:=> finally (callback)
+ -->

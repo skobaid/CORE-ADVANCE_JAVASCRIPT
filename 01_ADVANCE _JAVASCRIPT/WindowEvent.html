@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindowEvent</title>
+</head>
+<body onload = "alert('This is body onload')">
+    <h1>Window event</h1>
+    
+    <div id="mydiv"> </div>
+    
+    <script>
+        // window.onload = function()
+        // {
+        //     document.getElementById("mydiv").textContent = "Hello Window";
+        // }
+
+        function show ()
+        {
+            document.getElementById("mydiv").textContent = " This is by Eventlistener" ;
+        }
+        window.addEventListener("load",show);   //here load is onload
+        
+    </script>
+</body>
+</html>
+<!-- 
+    windowEvents:=> You can bind events with window.
+    onload()
+    Event Binding with html
+    <body onload = "alert('window Opened');">
+    
+    Binding With Js
+    window.addEventListener(event,handler,capturephase)
+
+ -->

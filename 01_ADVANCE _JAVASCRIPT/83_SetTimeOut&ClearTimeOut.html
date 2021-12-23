@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTime&ClearTime</title>
+</head>
+
+<body>
+    <h1>Set TimeOut and Clear Time Out</h1>
+    <p id="myp">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dignissimos accusantium vitae officiis eaque
+        nobis, amet quia dolores asperiores, cumque obcaecati. Recusandae iure autem nostrum maxime necessitatibus
+        molestiae totam qui.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dignissimos accusantium vitae officiis eaque
+        nobis, amet quia dolores asperiores, cumque obcaecati. Recusandae iure autem nostrum maxime necessitatibus
+        molestiae totam qui.
+        <br><br><button type="button" id="button">ClearTime</button>
+    </p>
+</body>
+
+    <script>
+    
+        // function change_p()
+        // {
+        //     document.getElementById("myp").style = "font-style:italic; color:red";
+        // }
+
+        // setTimeout(change_p,2000);
+
+       var timoutID =  setTimeout( function change_p()     //We can use anonymous Function
+        {
+            document.getElementById("myp").style = "font-style:italic; color:red";
+        }
+        ,2000)
+
+        function clear_time()
+        {
+            clearTimeout(timoutID);
+        }
+        var btn = document.getElementById("button");
+        btn.addEventListener("click",clear_time);
+    </script>
+</html>
+<!-- 
+    setTimeOut()=>Sets a time which executes a function or specified piece of code once after the timer 
+    expires.the function only executed once.
+
+    Syntax:->
+        setTimeOut(function,millisecond,para1,para2); //(para is optional)
+
+    clearTimeOut()=>This method cancel a timeout previously established by calling setTimeout().
+    Syntax=>
+        clearTimeOut(timeoutID);
+
+ -->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <!-- Event Binding With HTML Attribute -->
+    <h1>Event Handling</h1>
+    <button onclick="show()">ClickMe</button>      
+
+    <script>
+        document.write("<h1>Event<h1>");
+        
+        function show()
+        {
+            alert('This Is Event Binding with HTML Attribute');
+            document.write("hie");
+        }
+
+    </script>
+</body>
+</html>
+<!-- 
+    The Actions to which javascript can respond are called events..
+    An Event is some notable action to which a script can respond..
+
+    ex-- Clicking a button/an element,,Submitting Form,, Scrolling page ,,hovering element
+
+    ================Event Handler ==========================>
+        It is a javascript code associated with a particular part of the document and a particular event.
+        .onclick
+        .ondbclick (Double Click)
+        .onchange
+        .onblur
+    ================Event Binding===========================>
+    These Bindings are element Attributes, such as onclick and onchange, which can be set equal
+    to javascript that is to be executed when the given events occurs at the object..    
+ -->

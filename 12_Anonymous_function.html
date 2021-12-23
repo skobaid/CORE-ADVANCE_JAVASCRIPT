@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function</title>
+</head>
+<body>
+    
+    <script>
+            document.write("<h1>Anonymous Function</h1>")
+        //Thier is no name of function in anonymous function
+        // we can store function in variable..
+        var a = function(a)
+        {
+            document.write("This is Anonymous Function ",a)
+        };
+        a(10);
+
+        //..................................................................................//
+        //Passing Anonymous Function As Argument
+        document.write("<hr><h1>Passing Anonymous Function As Argument</h1>")
+        
+        function disp(myfun)
+        {
+            return myfun();
+        }
+       
+        var a = disp(function(){
+           return "This is Passing Anonymous as Arguments";
+       });
+       document.write(a);
+
+       //.....................................................................................//
+            //Returning Anonymous function
+            document.write("<hr><h1>Returning Anonymous</h1>")
+            
+            function _disp(a)
+            {
+                return function(b)
+                {
+                    return a+b;
+                };
+            }
+
+            var c = _disp(10);
+            document.write(c(20));
+                
+        
+    </script>
+</body>
+</html>

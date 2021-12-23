@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieDomainPathSecure</title>
+</head>
+<body>
+    <h1>How to set Cookie Domain Path and Secure</h1>
+
+    <script>
+        //path
+       //  document.cookie = "Name = This is My Cookie; max-age=" +60*60*24*10+"; path = /";
+       // document.cookie = "Name = This is My Cookie; max-age=" +60*60*24*10+"; path = /home";
+       //===domain===
+       document.cookie = "Name = This is My Cookie; domain = geekyshow.com";
+    </script>
+</body>
+</html>
+<!-- 
+    domain=>It specifies the domain for which the cookie is valid.
+    If not specified ,this defaults to the host portion of the current documnet location.
+
+    Path=> path can be /(root)or mydir/(directory) If not specified,defaults to the current path of the current
+    document location, as well as its descendants
+ -->

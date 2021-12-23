@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreviousSibling and PreviousElementSibling</title>
+</head>
+<body>
+    <h1 id="myid">
+        <!--This is Comment--> 
+        <span>We Are Learning Javascript</span><br>
+        <em>Hello</em><!--I am Comment-->
+        </h1>   
+    <p id="myid1">
+        This is Paragraph</p>
+    <p id="myid2">
+        <span>I am Span</span>I am Para..</p>
+
+        <script>
+            document.write("<h1>....PreviousSibling and PreviousElementSibling...</h1>");
+
+            var result =document.getElementById("myid");
+            document.write(result.previousSibling);
+            console.log(result.lastChild.previousSibling);      //include whitespace,text ,comment
+
+            document.write("<br>" + result.previousElementSibling);
+            console.log(result.lastChild.previousElementSibling);   //does not include whitespace,text ,comment
+
+            result.lastChild.previousSibling.textContent  = "I am The Last Node sibling"; //for change in content
+       </script>
+</body>
+</html>

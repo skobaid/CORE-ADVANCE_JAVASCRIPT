@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <script>
+        document.write("Constructor in javascript<br>");
+
+        function mobile()
+        {
+            this.model = model;
+            this.price = function(){document.write(this.model+" "+"Price is Rs 5000 ");}
+        }
+        var sam = new mobile('3220');
+        sam.price();
+        //...................with Parameter...........................................//
+        document.write("<hr>Constructor with Parameter<br>");
+
+        function mobile(model)
+        {
+            this.model = model;
+            this.pric ='8000';
+            this.price = function(){document.write(this.model+"  " +"Price is "+ this.pric);}
+        }
+        var sam = new mobile('3310');
+        var nokia = new mobile('6600');
+        var iphone = new mobile('13x');
+       // sam.price();
+        //nokia.price();
+        iphone.price();
+        
+    </script>
+</body>
+</html>

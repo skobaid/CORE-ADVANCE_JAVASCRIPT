@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName</title>
+</head>
+<body>
+    <p >This is getElementsByTagName Method</p>
+    <p>hiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
+    
+    <p>
+        <span>Hello</span>
+    </p>
+
+    <p id="specific">
+        <span>hii this is more specific methods</span><br>
+        <em>In javascript</em><br>
+        <span>End...</span>
+    </p>
+    <script>
+        var result = document.getElementsByTagName("p");
+        document.write(result);
+        console.log(result);
+
+        document.write("<hr>");
+        //....for specific use.............//
+        var res = document.getElementById("specific");
+        console.log(res);
+
+        var result = res.getElementsByTagName("span");
+        console.log(result);
+    
+
+        document.write("<hr>");
+       // getElementsByTagName with lenght property
+       var result = res.getElementsByTagName("em");
+       var len = result.length;
+
+       document.write(len + "<br>")
+       document.write(result);
+
+         // getElementsByTagName with Loop in Javasvript..
+         document.write("<hr>");
+         var len = document.getElementsByTagName("p").length;
+         for(let i= 0; i<len ;i++)
+         {
+             var result = document.getElementsByTagName("p")[i];
+            document.write(result + "<br>");
+            console.log(result);
+         }
+
+
+    </script>
+</body>
+</html>

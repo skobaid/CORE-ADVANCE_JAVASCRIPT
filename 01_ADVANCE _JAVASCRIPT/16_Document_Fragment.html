@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document_Fragment</title>
+</head>
+<body>
+    <div>
+        <h1>We Are Learning Document_Fragment</h1>
+    </div>
+    <script>
+    
+        document.write("<h1>Document Fragment</h1>");
+        var Document_Fragment = document.createDocumentFragment();
+        console.log(Document_Fragment);
+    </script>
+</body>
+</html>
+
+<!--
+    Ek Alag page create karta hai jo active nahi hota hai .
+    waha modification kar ke active page pe data dal sakte hai..
+
+    The DocumentFragment interface is a lightweight version of the Document that stores a piece of document 
+    structure like a standard document. However, a DocumentFragment isn’t part of the active DOM tree.
+
+If you make changes to the document fragment, it doesn’t affect the document or incurs any performance.
+
+Typically, you use the DocumentFragment to compose DOM nodes and append or insert it to the active DOM tree
+ using appendChild() or insertBefore() method.
+
+To create a new document fragment, you use the DocumentFragment constructor like this:
+
+let fragment = new DocumentFragment();
+Code language: JavaScript (javascript)
+Or you can use the createDocumentFragment() method of the Document object:
+
+let fragment = document.createDocumentFragment();
+-->

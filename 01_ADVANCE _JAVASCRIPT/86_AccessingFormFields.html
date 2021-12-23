@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccessingFormField</title>
+</head>
+<body>
+    <h1>Accessing Form Fields</h1>
+
+    <form action="" name="myform" id="myfrm">
+        username :-<input type="text" name="uname" id="uname" value=""><br><br>
+        Password :-<input type="password" name="pass" id="passid"><br><br>
+        <input type="submit" name="submit" id="">    
+    </form>
+    
+    <script>
+        //Accessing Form Fields using getElementById
+        // var username = document.getElementById('uname');
+        // console.log(username);
+        // console.log(username.name);
+        // console.log(username.type);
+        // console.log(username.id);
+
+        //Accessing Form Fields using element property Element[index-number]
+        // var username = document.myform.elements[0];
+        // console.log(username.name);
+        // console.log(username.type);
+        // console.log(username.id);
+
+        //Accessing Form Fields using Element['name_attribute-value']
+        // var username = document.myform.elements['pass'];
+        // console.log("name = " + username.name);
+        // console.log("type = " +username.type);
+        // console.log("ID = " +username.id);
+
+        //Accessing Form Fields using direct .fieldname or field_id
+        var username = document.myform.uname;
+        // console.log("name = " + username.name);
+        // console.log("type = " +username.type);
+        // console.log("ID = " +username.id);
+       
+        username.value = 'OBAID';
+        console.log(username.value);
+    </script>
+</body>
+</html>
+<!-- 
+    If form fields have unique id then it is possible to access them using the getElementById()method,
+    However, There are some other ways..
+
+    .elements[]--it contains collection of form fields
+    syntax => document.form_name.elements[index_number];
+
+    getElementsByName('field_name')-This is used to access form fields..
+ -->

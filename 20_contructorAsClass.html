@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor As Class</title>
+</head>
+<body>
+    <script>    
+    //We Define Class in Javascript using custom constructor..
+        document.write("<h2>Constructor as Class<br></h2>")
+
+        var Mobile = function(model_no,sprice){
+            this.model = model_no;
+            var color = 'white';
+            this.scolor = function(){return(color);};//for accessing var color from Outside
+            this.price= 3000;
+            this.sp = sprice;
+            this.sellingp = function(){return (this.price+this.sp);};
+           
+            this.data = function(){
+            document.write("Model No:- ", this.model," Colour:- ",this.color, " Price is ", this.sellingp(),"<hr>");
+            };
+        }
+
+        var samsung = new Mobile('3310',5000);
+        var nokia = new Mobile('6600',2500);
+        nokia.data();
+        //samsung.data();
+        document.write(samsung.scolor());
+        
+
+        /*  Private Properties and Methods :For private Use let,var,const instead of this
+        if we use var, let ,const instead of this ,we can not access properties or methods 
+        outside the block..        
+        */
+        
+    </script>
+</body>
+</html>

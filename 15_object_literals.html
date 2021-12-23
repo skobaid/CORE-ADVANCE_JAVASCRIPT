@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object_Literals</h1>
+    <script>
+    //Declaration of Object 
+
+    var fees = {};
+    //fees['Affan'] = 100;
+    //fees['Aamir'] = 200;  //method 1 (used in multiple word key)
+    //fees['Berma'] = 300;
+    fees.Affan = 100;       //method 2  (we can not use multiple word)
+    fees.salman = 200;
+    fees['total'] = function(){ return(100+200);};
+    document.write(fees['total']());
+
+    document.write("<hr><h2>Using Object Literal<br></h2>");
+        var fees = {
+            Affan:100, 
+            Salman:200, 
+            Awais:300,
+            "Super Man":500,
+            tota:function(){ return(100+200);}
+            };
+        document.write(fees['tota']());
+        document.write("<br>"+fees['Salman'])
+    </script>
+</body>
+</html>

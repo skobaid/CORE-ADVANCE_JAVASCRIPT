@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overriding</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>One Super Two Sub Class</h1>");
+
+        //Function for //Inheritance
+        function extend(child,parent)
+        {
+            child.prototype= Object.create(parent.prototype);
+            child.prototype.constructor = child;
+        }
+        
+        //Super Class//
+        var Mobile = function()
+        {
+            this.color='green';
+        }
+        // Pototype Method
+        Mobile.prototype.show = function(){return "Super Class Method";}
+
+        //sub class
+        var samsung = function(model,price)
+        {
+           //Mobile.call(this)
+        }
+          
+        //Inheritance
+        extend(samsung,Mobile);
+
+        samsung.prototype.show = function(){return "Sub Class Method";}
+ 
+        var sam = new samsung();
+        document.write(sam.show());
+        //document.write(sam.color)
+
+        var mob = new Mobile();
+       // document.write("<br>",mob.show());
+        
+        //................................................//
+       document.write("<hr>");
+
+       function multiplyNum(x, y, z)
+        {  
+        return x * y * z;  
+        }  
+  
+        function multiplyNum(x, y) 
+        {  
+        return x * y;  
+        }  
+        
+        var result = multiplyNum(1, 2, 3);  
+        document.write(result);
+        
+
+        
+    </script>
+</body>
+</html>

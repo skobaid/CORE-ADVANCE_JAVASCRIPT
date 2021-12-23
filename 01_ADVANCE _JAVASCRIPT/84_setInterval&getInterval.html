@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setinterval&Getinterval</title>
+</head>
+<body>
+    <h1>setinterval And getInterval Methods in Javascript</h1>
+    <div id="mydiv">
+
+    </div>
+    <button type="button" id="clrbtn">ClearInterval</button>
+    <script>
+        //setinterval
+        var interval = setInterval( function run_text()
+        {
+            document.getElementById("mydiv").textContent +="Hello This is Time interval";
+        },2000);
+
+       //clearinterval
+        function clear_interval()
+        {
+            clearInterval(interval);
+        }
+
+        document.getElementById("clrbtn").addEventListener("click",clear_interval);
+    </script>
+</body>
+</html>
+<!-- 
+    The setinterval method repeatedly calls a function or executes a code snippet, with a fixed time delay
+    between each call .It returns an interval ID which uniquely identifies the interval, so u can remove it 
+    later by calling ClearInterval().
+
+    Syntax=>setInterval(fucntion,millisecond,para1,para2)//para is optional
+
+    ClearInterval:-It remove setInterval;
+ -->

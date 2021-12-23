@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete data in Text_Nodes</title>
+</head>
+<body>
+    <h2 id="myh">Hello Javascript</h2>
+    <script>
+        document.write("<h1>Delete Data in TextNodes</h1>");
+
+        var h= document.getElementById("myh");
+        h.firstChild.deleteData(0,16);     
+        console.log(h.firstChild.data);     
+    </script>
+</body>
+</html>
+
+<!--
+    This method is used to delete or remove text content from a text node and comment node.It deletes Specified
+    lenght of characters starting from index defined in start..
+        syntax:=>TextNode.deleteData(start, Length);
+-->

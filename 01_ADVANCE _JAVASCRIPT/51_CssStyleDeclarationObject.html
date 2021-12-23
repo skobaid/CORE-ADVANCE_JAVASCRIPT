@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CssStyleDeclaration</title>
+</head>
+<body>
+    <p id="myp" style="background-color:crimson; color: beige !important; font-size: 50px;">
+    This is Paragraph...</p>
+    <script>
+        document.write("<h1>CSS Style Declaration Object</h1>");
+        var p = document.getElementById("myp");
+
+        var cso = p.style;
+       
+        console.log(cso.cssText);       //Return css property and value
+        //cso.cssText = "font-size:45px; color:red"; //Setting property but it will override all <p> style property
+        console.log(p);
+        
+        console.log(cso.length);  //Length property
+        
+        console.log(cso.item(2)); //property name (pass index number) (console.log(cso[0]));
+
+        //============Get Property Value========================================
+
+        var property_value = cso.getPropertyValue('color');
+        console.log(property_value);
+
+        //================Remove property================================
+
+       // cso.removeProperty('color');      //For Deleting property
+
+        //=======================Set property========================
+
+        var get = cso.setProperty('font-size','90px','important');  //Argumnet=> (property name,value and priority )
+        console.log(p);
+
+        //============For Getting priority of method===================
+
+        var get_priority = cso.getPropertyPriority('color');
+        console.log(get_priority);
+    </script>
+</body>
+</html>
+<!-- 
+    CssStyleDeclaration object represents a collection of css property value pairs.
+
+    The style property is used to set or get the style of an element..
+ -->

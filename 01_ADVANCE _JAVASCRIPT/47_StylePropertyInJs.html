@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style_Property</title>
+</head>
+<body>
+    <p id="myp" style="background-color: brown; color: cornsilk; font-size: 50PX; font-style: italic;">
+        THIS IS PARAGRAPH....</p>
+    <script>
+        document.write("<h1>Style Property </h1>");
+
+        var p = document.getElementById("myp");
+        console.log(p.style);               //Return CssStyleDeclaration Object
+        p.style.backgroundColor = "red";            //Dom Property
+        p.style.fontStyle = "inherit";
+        p.style.border = "5px solid black "
+
+        //Set Multiple style in single statement 
+        //Element_Name.style.cssText = "color;blue border: 1px solid blak";
+    </script>
+</body>
+</html>
+<!-- The style property is used to get or set the inline style of an element. While getting , it returns 
+a CssStyleDeclaration object that contains a list of all style properties  for that element with values 
+assigned for the attributes that are defiend in the elements inline style attributes..
+
+This return only inline style not external..
+for read write we can use..
+
+
+
+ -->

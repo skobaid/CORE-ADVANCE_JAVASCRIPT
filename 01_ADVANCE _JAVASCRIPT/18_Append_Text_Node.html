@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Text Node</title>
+</head>
+<body>
+    <div id ="myid">
+        <h1 id="myh1">We are learning Js</h1>
+        <h1>OBAID</h1>
+    </div>
+    <section id="mysec">
+
+    </section>
+
+    <script>
+        //Here we Create Text Node  and append it 
+        document.write("<hr><h1>Append Text Node</h1>");
+        
+        //creating  a new Text Node 
+        var new_node =document.createTextNode("This is Text Node..");
+    
+        //Appending New Text to in <div id="myid">
+        var targetnode= document.getElementById("myid");
+        targetnode.appendChild(new_node);
+        //targetnode.appendChild(document.createElement("h2")); we can write like this
+        console.log(targetnode);
+    </script>
+</body>
+</html>  

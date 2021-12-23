@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getAttribute</title>
+</head>
+<body>
+    <p id="myp" class="myclass">Paragraph</p>
+    <script>
+        document.write("<h1>......GetAttribute......</h1>");
+        var p =document.getElementById("myp");
+        var get_attribute = p.getAttribute('class');
+        console.log(get_attribute);
+        console.log(p.id);  //also we have this method for Getting attribute
+    </script>
+</body>
+</html>
+<!--
+    getAttribute():=>This method is used to set the value of an attribute on the specified element. 
+    if the attribute is already exists, the value is updated; otherwise new attribute is added with the 
+    specified name and value..
+    
+    syntax:=> Element.setAtribute(name,value)
+-->

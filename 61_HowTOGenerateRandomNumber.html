@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>How To Generate Random Number..</h1>");
+
+        document.write(Math.random()+ "<br>") ;
+        document.write(Math.random()*10+1 + "<br>") ;
+        document.write(Math.round(Math.random()*10000+1) + "<br>") ;
+
+        //....Date in Javascript........................//
+        document.write("<hr><h1>Date in Js..</h1>");
+        //create Date Objects Using Date() 
+
+        var dat = new Date();
+        document.write(dat+ "<br>");
+        var dat2 = new Date(2020,04,12,9,45,35,0);
+        document.write(dat2);
+        //Using Date String...
+
+        //.......Set Date Method In Js.............//
+
+        document.write("<hr><h1>Set Date Method in Js..</h1>");
+        
+        var d = new Date();
+        document.write(d + "<br>");
+
+        d.setHours(22);
+        document.write(d + "<br>");
+
+        d.setMinutes(25)
+        document.write( d+ "<br>");
+
+        d.setSeconds(22) 
+        document.write(d+ "<br>");
+
+        d.setDate(20);
+        document.write(d + "<br>");
+
+        d.setMonth(11);
+        document.write(d + "<br>");
+
+        d.setFullYear(1996)
+        document.write(d + "<br>");
+
+        d.setFullYear(1996, 11, 20);
+        document.write(d + "<br>");
+        
+        //......Get Date Method............//
+        document.write("<hr><h1>Get Date Method in Js</h1><br>");
+
+        var d = new Date();
+        document.write(d + "<br>");
+
+        document.write("Hours:=> " + d.getHours() + "<br>");
+        
+        document.write("Minutes:=> " + d.getMinutes() + "<br>");
+
+        document.write("Seconds:=> " + d.getSeconds() + "<br>");
+        
+        document.write("Month:=> " + d.getMonth() + "<br>");
+
+        document.write("Year:=> " + d.getFullYear() + "<br>");
+        
+        document.write("Day:=> " + d.getDay() + "<br>");
+
+        
+        //....Retrive Month Name and Day Name In javascript.............//
+
+        document.write("<hr><h1>Retrive Month Name And Day Name  Js</h1><br>");
+
+        var d = new Date();
+        var month = d.getMonth();
+        var day = d.getDay();
+
+        document.write(getMonthName(month) + "<br>");
+        document.write(getDayName(day) + "<br>");
+
+        function getMonthName(monthnumber)
+        {
+            var monthname = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            return monthname[monthnumber];
+        }
+
+        function getDayName(daynumber)
+        {
+            var dayname = ['sun','mon','tue','wed','thur','fri','sat'];
+            return dayname[daynumber];
+        }
+        
+
+        //.....How to Format Date in Js..........//
+        document.write("<hr><h1>Formatting Date in Js</h1><br>");
+
+        var d = new Date();
+        document.write(formatDate(d) + "<br>");
+
+        function formatDate(pd)
+        {
+            var date = pd.getDate();
+            var month = pd.getMonth();
+            month++;
+            var year = pd.getFullYear();
+
+            return date + " - " + month + " - " + year;
+        }
+
+        //....Convert Date Into String...........//
+        document.write("<hr><h1>Convert Date Into String</h1><br>");
+
+        var d = new Date();
+
+        document.write(d.toString() + "<br>");
+        document.write(d.toUTCString() + "<br>");
+        document.write(d.toTimeString() + "<br>");
+    </script>
+</body>
+</html>

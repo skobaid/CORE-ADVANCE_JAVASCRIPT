@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for_in</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>For In Loop <br></h1>");
+
+            function mobile(model)
+            {
+                this.model = 3310;
+                this.color = 'Red';
+                this.price = function(){document.write(this.model+" "+"Price is Rs 5000.Color",this.color,"<br>");}
+            }
+            var sam = new mobile();
+            var nokia = new mobile('6600');
+           
+            for(var specification in sam)
+            {
+                if(typeof sam[specification]!=='function')
+                document.write(specification+" :-"+sam[specification],"<br>");
+               
+    
+            }
+                // for Displaying Keys Of Object...
+                document.write("<hr>")
+                a= Object.keys(nokia);
+                document.write(a);
+    </script>
+</body>
+</html>

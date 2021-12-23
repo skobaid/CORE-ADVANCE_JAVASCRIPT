@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="hello">GetElementByClass</title>
+</head>
+<body>
+
+        <h1>We Are Learning js</h1>
+        <h1>Affan ..........</h1>
+        <h3>Awais</h3>
+        
+        <p id="demo">
+            hello
+            <span class="hello">hii this is Class method</span>
+            <em>world</em><span>youtube</span>
+        </p>
+       
+        <p class="myclass"><span>byee</span>instagram</p>
+       
+        <div>
+            <p>1st p inside div</p>
+            <p class="geek">2nd p inside div</p>
+        </div>
+
+        <p class="hello">How r u..?</p>
+
+    <script>
+         var cl = document.getElementsByClassName("demo");
+         console.log(cl);
+         document.write(cl);
+            
+
+        //......................GetElementByClass more Specific ................//
+
+        document.write("<hr> <h1>GetElementByClass specific class</h1>");
+        var gets = document.getElementById("demo");
+        var result = gets.getElementsByClassName("hello");
+        console.log(result);
+        document.write(result);
+
+         //......................GetElementByClass with Length method ................//
+         document.write("<hr> <h1>GetElementByClass with length property</h1>");
+         
+         //var len = document.getElementsByClassName("hello").length; //1st Method..
+         var data = document.getElementsByClassName("hello");          //2nd Method
+         var len = data.length;
+         document.write(data + "<br>");
+         console.log(data);
+         document.write(len);
+         console.log(len);
+
+          //......................GetElementByClass Method with loop..............//
+          document.write("<hr> <h1>GetElementByClass with Loop</h1>");
+         
+          var len = document.getElementsByClassName("hello").length;
+
+          for(let i=0; i<len ; i++)
+          {
+              var result = document.getElementsByClassName("hello")[i];
+              document.write(result + "<br>");
+              console.log(result);
+          }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+
+
+    <script>
+            //.....................................................................//
+            document.write("<h2>Global Variable</h2>")
+            i = "I am Global Variable"  // we can Access Global variable from anywhere in program
+
+            function show()
+            {
+                document.write("<hr>",i,"<br>")
+            }
+            show();
+
+            function disp()
+            {
+                document.write(i)
+            }
+            disp();
+
+            //............................................................................//
+            //Local Variable
+            document.write("<hr><h2>Local Variable</h2>")
+
+            function disp()
+            {
+                var j = "This is Local Variable of outer function";  // we can not access from outside function 
+                document.write(j)          //set with var otherwise it will be global
+                function inner()
+                {
+                    var k = "This is local variable of inner function";
+                    document.write("<br>",k);
+                    document.write("<br>getting from outer"+j)
+                }
+                inner();
+            }
+            disp();
+               // document.write(j)
+
+            //....................................................................................//
+            //Block Scope in Javascript
+            document.write("<hr><h2>Block Scope</h2>")
+            if(true)
+            {
+                let i = 10;     // if we use let for variable in block we can't access that variable 
+                document.write(i);  //from outside block
+            }
+    </script>
+</body>
+</html>

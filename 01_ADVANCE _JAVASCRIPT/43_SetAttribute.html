@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetAttribute</title>
+</head>
+<body>
+    <p id="myp" class="myclass" style="background-color: yellowgreen; font-size: 50px;">Paragraph</p>
+    
+    <script>
+        document.write("<h1>......SetAttribute......</h1>");
+        var p =document.getElementById("myp");
+       
+        p.setAttribute('id','newid');
+        p.className = "newClass";   //Also we can use this method to setAtrribute
+
+        p.setAttribute('title','Paragraph');
+
+        //for style 
+        //p.setAttribute('style','font-style: italic'); //Style override kar deta hai pahle ki style ko
+        p.style.fontStyle = "italic";
+        console.log(p);
+    </script>
+
+</body>
+</html>
+<!--
+    SetAttribute():=>This method returns the value of a specified attribute on the element .If the given
+    attribute does not exist, the value returned will either be null or " ".
+    
+    syntax:=> var get_attribute = Element.getAtribute(AttributeName)
+-->

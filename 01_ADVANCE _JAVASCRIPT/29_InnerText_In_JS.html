@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner_Text</title>
+</head>
+<body>
+    <div id="mydiv">  
+        <ul id="myul">
+            <li>Affan</li>
+            <li>Awais</li>
+            <li>Aamir</li>
+            <li>Salman</li>
+        </ul>
+    </div>
+
+    <script>
+        document.write("<h1>OuterHtml</h1>");
+
+        var u = document.getElementById("myul");
+        u.innerText = "This is innerText";
+        console.log(u);
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusEvent</title>
+</head>
+<body>
+    <h1>Focus Event</h1>
+    <div id="mydiv" style="width: 300px; height: 300px; background-color: chartreuse;">
+    <p style="padding-top: 110px; padding-left:20px ;">NAME:  <input type="text" id="myinput"><p>
+    </div>  
+    <script>
+        //Focus Event
+        var input = document.getElementById("myinput");
+
+        function changecolor(e)
+        {
+            input.style.backgroundColor = "skyblue";
+            
+        }
+
+        function changecolor2(e)
+        {
+            input.style.backgroundColor = "white";
+        }
+
+        input.addEventListener("focus",changecolor,false);
+        input.addEventListener("blur",changecolor2,false);
+    </script>
+</body>
+</html>
+<!-- 
+    Focus Event:=>
+        It fires when an element gains focus, such as selecting a form field. No Bubble
+
+    Blur:=>
+        It fires when element loses focus, such as moving away from field.
+        No Bubble
+    
+    focusin:=>
+        It fires Just as an element is about to gain focus.
+
+ -->

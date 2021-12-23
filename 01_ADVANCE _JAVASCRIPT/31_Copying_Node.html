@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copying_Node</title>
+</head>
+<body>
+    <ul id="myul">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <div id="mydiv">
+
+    </div>
+
+    <script>
+        document.write("<h1>Copying Node</h1>");
+        //How to Copy Node in Javascript.....
+        var ul = document.getElementById("myul");
+        var duplicateNode = ul.cloneNode(true);
+        console.log(duplicateNode);
+
+        var div = document.getElementById("mydiv");
+        div.appendChild(duplicateNode);
+        console.log(div);
+        console.log(document.body);
+    </script>
+</body>
+</html>
+<!--
+    The cloneNode Method is used to copy node.
+    It creates a copy of node including all attributes and their values and returns the clone.  
+
+    syntax :=>cloneNode(false) will copy only the element,attributes and thier values
+              cloneNode(true) will copy entire element with child as well 
+        var duplicateNode = targetNode.cloneNode(false/true);
+-->

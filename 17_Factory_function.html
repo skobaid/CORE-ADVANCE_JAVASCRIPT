@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Function</title>
+</head>
+<body>
+        <script>
+            //.....................................................................//
+   //when a function return an object,we call it factory function.It can return Object instance     
+                document.write("Factory Function<br>");
+                function mobile()
+                {
+                    return{
+                        model:'Galaxy',
+                        price:function(){return "Price Rs.3000";}
+                    };
+                }
+                var samsung = mobile();
+                document.write(samsung.model+" "+samsung.price());
+
+    //.........Factory Function With Parameter...........................//
+                document.write("<hr>Factory Function with Parameter<br>");
+                function mobile(model_no)
+                {
+                    return{
+                        model:model_no,
+                        price:function(){return "Price is Rs.3000";}
+                    };
+                }
+                var samsung = mobile('Galaxy');
+                var nokia = mobile('3310');
+                document.write(samsung.model+" "+samsung.price(),"<br>");
+                document.write(nokia.model+" "+nokia.price());
+        </script>
+</body>
+</html>

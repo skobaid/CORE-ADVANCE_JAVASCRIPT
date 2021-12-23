@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document_Fragment Example</title>
+</head>
+<body>
+    <div
+     id ="myid">
+        <h1 id="myh1">We are learning Js</h1>
+        <h1>OBAID</h1>
+    </div>
+
+    <script>
+        document.write("<h1>............Document Fragment Example........<h1/>");
+        //Creating Empty Document Fragment
+        var new_df = document.createDocumentFragment();
+        //console.log(new_df);
+        
+        //Creating New Element h2 and p
+        var new_elementh = document.createElement("h2");
+        var new_elementp = document.createElement("p");
+
+        //Text For element h2 and p 
+        new_elementh.textContent = "This is H2 Node Element";
+        new_elementp.textContent = "This is P Node Element";
+
+       //Appne h2 node and p node into document Fragment
+       new_df.appendChild(new_elementh);
+       new_df.appendChild(new_elementp);
+       //console.log(new_df);
+       
+       //Append Document Fragment into <div id = "myid">
+       target_div = document.getElementById("myid");
+       target_div.appendChild(new_df);
+       console.log(target_div);
+       
+    </script>
+</body>
+</html>
+<!--
+    After Assigning Documnet Fragment into Active Page the Document Fragment Will be empty
+-->

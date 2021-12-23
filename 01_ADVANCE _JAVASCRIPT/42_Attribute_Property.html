@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Property </title>
+</head>
+<body>
+    <h2 id="myh">Hello Javascript</h2>
+    <p id="myp" title="para" class="myclass">This is Paragraph..</p>
+    
+    <script>
+        document.write("<h1>Attribute Property</h1>");
+
+        var p = document.getElementById("myp");
+       // p.attributes;
+      //console.log(p.attributes);
+      console.log(p.attributes[0]);  //For gettin Specific position
+      console.log(p.attributes['title']);  //With the help of key 
+    </script>
+</body>
+</html>
+
+<!--
+    Attribute Property  returns a live Collection of all attributes nodes registered to the specified node.
+    It is a read-only property ..
+    syntax = >Element.attributes[index/key];
+-->

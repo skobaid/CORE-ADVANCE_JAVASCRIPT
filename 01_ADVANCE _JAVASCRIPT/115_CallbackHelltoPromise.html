@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Promise</h1>
+
+    <script>
+        //Refactor using promise
+        console.log("start");
+        function getName(name)
+        {
+            return new Promise((resolve,reject)=>
+            {
+                setTimeout(() => {
+                console.log("Inside Function");
+                resolve(name);
+            }, 3000);
+            }
+            )    
+        }
+
+        function getHobbies(name)
+        {
+            return new Promise((resolve,reject)=>
+            {
+                setTimeout(() => {
+                console.log("Inside Hobbies Function");
+                resolve(['cricket','Reading','Dancing']);
+            }, 3000);
+            }
+            )   
+        }
+
+        getName("OBAID")
+            .then(value=>console.log(value))
+            .then(name => getHobbies(name))
+            .then(hobby =>console.log(hobby))
+            //.catch()   // for error Handling
+        // var name = 
+        // getName("OBAID",(name)=>
+        // {
+        //     console.log(name);
+        //         getHobbies(name,(hobby)=>
+        //         {
+        //          console.log(hobby);
+        //         }) 
+        // }); 
+        console.log("End");
+
+    </script>
+</body>
+</html>

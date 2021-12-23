@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super_Method</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>Method OverRiding in Js</h2><br>");
+
+        class Father
+        {
+            
+               show()
+               {
+                   return " Super Calss.<br>";
+               }
+        }
+
+        class Son extends Father
+        {
+          show()
+          {
+              return "Sub Class.."
+          } 
+
+               
+        }
+
+       var s=new Son();
+       document.write(s.show());
+      
+       
+    </script>
+    
+</body>
+</html>

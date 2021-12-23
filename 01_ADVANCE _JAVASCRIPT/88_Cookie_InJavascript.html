@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <h1>Cookie And How It Works</h1>
+
+    <script>
+            //========How to set cookie into client Machine===============//
+        document.cookie = "username = This is obaid's cookie";
+        alert(document.cookie);
+// document.cookie ="obaid = this is cookie"; expires = date(max-age= in second); domain = domain; path = path; secure;
+    </script>
+</body>
+</html>
+
+<!-- 
+    Cookie in JS=>cookie are exposed as the cookie property of the documnet object. This property is both
+    readable writeable.
+ -->
+<!-- 
+    Cookie :-It is a samll piece of text data set by web browser that resided on the client's machine .
+    Once it's been set, the client Automatically returns the cookie to the web server with each request 
+    that it makes.This allows to server to place value it wishes to 'remember' in the cookie, and have 
+    access to them when creating response. 
+
+    Type of Cookie:=
+        Session cookie:==> cookie that are set witout the expires field are called session cookie. It is 
+    destroyed when the user quit browser.
+
+    Persistent Cookies==>
+        The browser keep it up untill thier expiration date is reached.
+
+ -->

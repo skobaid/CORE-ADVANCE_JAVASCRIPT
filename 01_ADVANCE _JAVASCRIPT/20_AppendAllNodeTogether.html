@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append All Node Together</title>
+</head>
+<body>
+    <div
+     id ="myid">
+        <h1 id="myh1">We are learning Js</h1>
+        <h1>OBAID</h1>
+    </div>
+    
+    <section id="mysec">
+
+    </section>
+
+    <script>
+        document.write("<h1>Append All Node Together....</h1>");
+
+        var new_element = document.createElement("h3");
+        var new_text = document.createTextNode("This is Text Node Append into Element Node");
+        var new_comment = document.createComment("This is Commend Node");
+
+        //Append Text Node Into Element Node..
+        new_element.appendChild(new_text);
+        //console.log(new_element);
+
+        //Append Element Node Into <div id = "myid">
+        var target_el = document.getElementById("myid");
+        target_el.appendChild(new_element);
+
+        //Append comment Node Into <div id = "myid">
+        var target_el = document.getElementById("myid");
+        target_el.appendChild(new_comment);
+
+        console.log(target_el); 
+    
+    </script>
+</body>
+</html>

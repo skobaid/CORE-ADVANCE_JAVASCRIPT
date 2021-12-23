@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiDimensional</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Getting Data From User In MultiDimensional Array..<br></h1>");
+        //Defining 2D Array........
+        var r= 3;
+        var c= 2;
+        var data= new Array(r);
+        
+        for(i=0; i<r; i++)
+        {
+            data[i]= new Array(c);
+        }
+
+        //Input For Array....
+        for(var i=0; i<r; i++)
+        {
+            for(var j=0; j<c; j++)
+            {
+                data[i][j]=prompt("Enter Names");
+            }
+        }
+
+        //Displaying Value
+
+        for(var i=0; i<r; i++)
+        {
+            for(var j=0; j<c; j++)
+            {
+                document.write(data[i][j]+ " ")
+            }
+                document.write("<br>")
+        }
+    </script>
+</body>
+</html>

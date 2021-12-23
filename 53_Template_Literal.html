@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template_Literal</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Template Literal</h1><br>");
+        //We can Achieve new line in back-tick instead of single or double quote..
+
+        console.log(`hiiii
+obaid`);
+
+        document.write("<hr><h1>Stirng Interpolation</h1><br>");
+        //template Literal can contain Placeholders. These are indicated by the dollar sign and curly braces.
+        //(${Expression})
+
+        function my_fun(anything){
+            return anything;
+        }
+        var str = "Hello";
+        document.write(`${str} world..!`);
+        document.write(`<br> ${5+9} ${str} world..!`);
+        document.write(`<br>${my_fun("It can Return Function")}`)
+    </script>
+</body>
+</html>
+<!--
+
+    Template Literals are string literal allowing embedded expressions.
+    You Can Use Multi-line and Strings interpolation features with them..
+    it is enclosed by the  back-tick (` `) insread of duouble qoute or single qoute..
+-->

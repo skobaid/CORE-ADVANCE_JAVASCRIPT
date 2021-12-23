@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SplitText</title>
+</head>
+<body>
+    <h2 id="myh">Hello Javascript</h2>
+    <script>
+        document.write("<h1>Split Text</h1>");
+
+        var h= document.getElementById("myh");
+        h.firstChild.splitText(2);     //(it takes 0,1 does not include 2 index)
+        console.log(h);     
+    </script>
+</body>
+</html>
+
+<!--
+    The SplitText  breaks the text into two nodes at the specified start index, Keeping both nodes in the tree 
+    as sibling .
+    It return right sides of the split in a new text node and leaves the left side in the original.
+     syntax:=> var right_side = TextNode.splitText(start);
+-->

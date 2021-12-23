@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Nodes And children</title>
+</head>
+<body>
+    <h1 id="myid">
+        <!--This is Comment--> 
+        <span>We Are Learning Javascript</span>
+        </h1>   
+    <p id="myid1">
+        This is Paragraph</p>
+    <p id="myid2">
+        <span>I am Span</span>I am Para..</p>
+    <script>
+            //child Nodes Vs children
+            var result = document.getElementById("myid2");
+            document.write("Child Nodes = " +result.childNodes);
+            document.write("<br> Children = " + result.children);
+            console.log(result.children);
+            console.log(result.childNodes);
+
+            document.write("<hr>"+result.children[0]);
+            console.log(result.children[1]);
+
+            document.write("<hr> with Loop<br>");
+            for (let i=0 ; i<result.childNodes.length; i++)  //We can do same for children 
+            { 
+                document.write(i + " ");
+                document.write(result.childNodes[i].textContent +"<br>");
+                console.log(result.childNodes);
+            }
+
+            document.write("<hr> with Loop<br>");
+            for (let i=0 ; i<result.children.length; i++)  //We can do same for children 
+            { 
+                document.write(i + " ");
+                document.write(result.children[i] +"<br>");
+                console.log(result.children);
+            }
+
+            // changing  Content
+            document.write("<hr>Change in Content<br>");
+            var result = document.getElementById("myid");
+            result.children[0].textContent = "I am Learning DOM";
+    </Script>
+</body>
+</html>
+
+<!--
+    childNodes:
+The childNodes property is a property of Node in Javascript and is used to return a Nodelist of child nodes.
+ Nodelist items are objects, not strings and they can be accessed using index numbers. The first childNode 
+ starts at index 0.
+Syntax
+
+element.childNodes
+
+children
+The children is a property of element which returns the child elements of an element as objects.
+Syntax
+
+element.children
+The main difference between children and childNodes property is that children work upon elements 
+and childNodes on nodes including non-element nodes like text and comment nodes.
+-->

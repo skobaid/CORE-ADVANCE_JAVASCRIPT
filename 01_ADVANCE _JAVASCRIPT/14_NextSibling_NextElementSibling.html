@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nextSibling and nextElementSibling</title>
+</head>
+<body>
+    <h1 id="myid">
+        <!--This is Comment--> 
+        <span>We Are Learning Javascript</span><br>
+        <em>Hello</em><!--I am Comment-->
+        </h1>   
+    <p id="myid1">
+        This is Paragraph</p>
+    <p id="myid2">
+        <span>I am Span</span>I am Para..</p>
+
+        <script>
+            document.write("<h1>...nextSibling and  nextElementSibling....</h1>");
+
+            var result =document.getElementById("myid");
+            document.write(result.firstChild.nextSibling);
+            console.log(result.firstChild.nextSibling);      //include whitespace,text ,comment
+
+            document.write("<br>" + result.firstChild.nextElementSibling);
+            console.log(result.firstChild.nextElementSibling);   //does not include whitespace,text ,comment
+
+            result.firstElementChild.nextElementSibling.textContent  = "Next Sibling"; //for change in content
+       </script>
+</body>
+</html>

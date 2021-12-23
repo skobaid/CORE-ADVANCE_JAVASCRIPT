@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super_Sub_Class</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>One Super Two Sub Class</h1>");
+
+        //Function for //Inheritance
+        function extend(child,parent)
+        {
+            child.prototype= Object.create(parent.prototype);
+            child.prototype.constructor = child;
+        }
+        
+        
+
+        //Super Class//
+        var Mobile = function()
+        {
+            this.color = 'red';
+        }
+        // Pototype Method
+        Mobile.prototype.getModel = function(){return this.model;}
+       
+
+        //sub class
+        var samsung = function(model,price)
+        {
+            //Mobile.call(this);    this is not inheritance ,this for accessing super class properties.
+            this.model = model; //Calling Parent Class//
+            this.price = price;
+        }
+         
+        //sub Class
+        var lenovo =  function (model)
+        {
+            this.model = model;
+        }
+        
+        //Inheritance
+        extend(samsung,Mobile);
+        extend(lenovo,Mobile);
+
+        //Create Prototype Object of sub Class always After calling extend function
+        samsung.prototype.getp = function(){return this.price;} //prototype of samsung constructor
+
+        var galaxy = new samsung('S3',8000);
+        var lenvo = new lenovo('p40');
+        var mob = new Mobile();
+        document.write(mob.color,"<br>");
+
+        document.write(galaxy.getModel()+"<br>");
+        document.write(galaxy.getp()+"<br>");
+        document.write("Lenovo:-"+lenvo.getModel());
+        
+        //document.write("<hr>",galaxy.color+"<br>");
+        
+    </script>
+</body>
+</html>

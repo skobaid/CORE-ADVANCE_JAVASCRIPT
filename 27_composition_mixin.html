@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composition_Mixins</title>
+</head>
+<body>
+    <script>
+
+        function extend(child,parent)
+        {
+            child.prototype= Object.create(parent.prototype);
+            child.prototype.constructor = child;
+        }
+
+        var human = function()
+        {
+
+        }
+
+        human.prototype.eat = function ()
+        {
+            return "Super Class Eat Method";
+        }
+        human.prototype.walk = function ()
+        {
+            return "Super Class walk Method";
+        }
+        human.prototype.talk = function ()
+        {
+            return "Super Class talk Method";
+        }
+
+        //sub class
+
+        var animal = function()
+        {
+
+        }
+        extend(animal,human);
+
+        var robo = function()
+        {
+
+        }
+        extend(robo,human);
+
+        var an =new animal();
+        document.write(an.eat());
+//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,//
+        
+document.write("<hr>Composition Or Mixins<br>");
+
+
+         //Mixin Function
+         function mixin(target,...sources)
+        {
+            Object.assign(target,...sources); //2nd method
+        }
+
+        //Object Literal,Composition or mixin
+        var eating = {
+            eat : function(){ return "I Can Eat...";}    // method
+        };
+        
+        var walking = {
+            walk : function(){ return "I Can Walk....";}   
+        };
+
+        var talking={
+            talk : function(){ return "I can talk.....";}
+        }
+
+        var starting={
+            start : function(){ return "I can Start.....";}
+        };
+
+        var naming = {name:'Affan'};
+
+        //Creating COnstructor/classs
+
+        var Human = function ()
+        {
+            
+        }
+
+        var Robot = function ()
+        {
+            
+        }
+
+        //Compositing Features to Human
+        //var obaid = Object.assign({},eating,walking,talking,naming);  //1st method
+          
+         mixin(Human.prototype,walking,talking,eating,naming);
+         var obaid =  new Human();  
+
+        document.write(obaid.eat());
+        document.write(obaid.walk());
+        document.write(obaid.talk());
+        document.write("<br>",obaid.name);
+
+
+        mixin(Robot.prototype,walking,talking,starting);
+        var Robot =  new Robot();
+
+        document.write("<hr><br>ROBO...",Robot.walk());
+        //document.write(Robot.eat());  //not defined because Robot dont have eat feature
+        document.write("<br>"+Robot.talk());
+        document.write("<br>"+Robot.start());
+
+    </script>
+</body>
+</html>

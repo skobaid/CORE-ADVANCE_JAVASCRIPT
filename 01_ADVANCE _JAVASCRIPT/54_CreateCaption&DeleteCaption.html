@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateCaption&DeleteCaption</title>
+</head>
+<body>
+
+    <table border="50" id="mytable">
+        <caption>It's My Table Caption</caption> 
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>course</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Obaid</td>
+                <td>Javascript</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Affan</td>
+                <td>Python</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>103</td>
+                <td>Awais</td>
+                <td>Django</td>
+            </tr>
+        </tfoot>
+        </tbody>
+    </table>
+    
+
+    <script>
+        document.write("<h1>Create Caption and Delete Caption Method of HTML table Element </h1>");
+
+        var table = document.getElementById("mytable");
+
+        var caption = table.createCaption();
+        caption.innerHTML = "MY CAPTION";       //For Assigning value into caption
+        console.log(caption);
+        document.write(caption.innerHTML);
+
+      // table.deleteCaption();         //For Delete Caption
+    </script>
+</body>
+</html>

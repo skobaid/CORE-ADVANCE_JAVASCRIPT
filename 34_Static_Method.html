@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>Static Method In JS</h2>")
+
+        class Mobile
+        {
+            static disp()
+            {
+                return "Static Method";
+            }
+        }
+
+        document.write(Mobile.disp());
+    </script>
+</body>
+</html>
+
+<!--Static Defination
+
+The static keyword defines a static method or property for a class, or a class static initialization
+ block (see the link for more information about this usage). Neither static methods nor static 
+ properties can be called on instances of the class. Instead, they're called on the class itself.
+
+Static methods are often utility functions, such as functions to create or clone objects, whereas 
+static properties are useful for caches, fixed-configuration, or any other data you don't need to be
+ replicated across instances.
+-->

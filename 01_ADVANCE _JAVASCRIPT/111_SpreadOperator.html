@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpreadOperator</title>
+</head>
+<body>
+    <h1>Spread Operator</h1>
+
+    <script>
+        var a = [10,20,30];
+        var b = [5,6,...a,40,50,60]      //Spread operator   var b =[10,20,30]
+        var c =[...b];
+        var e =[100,20];
+        var d =[...c, ...e]
+        a[0] = 50;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+        //We can perform same operations on objects.......
+    </script>
+</body>
+</html>
+<!-- 
+    spreadOperator=>
+        Spread syntax (...) allows an iterable such as an array expression or string to be expanded in 
+        places where zero or more arguments (for function calls) or elements (for array literals) are expected,
+        or an object expression to be expanded in places where zero or more key-value pairs
+        (for object literals) are expected.
+
+        Syntax:=>...geek
+ -->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeEventListener</title>
+</head>
+<body>
+    <h1>Remove Event Listener</h1>
+    
+
+    <button id="mybtn">Click</button>
+    <script>
+        btn = document.getElementById("mybtn");
+
+        function show()
+        {
+            alert('This is Add Event Listner..');
+        }
+
+        btn.addEventListener("mouseover", show) //here we uses anonymous function
+       
+        btn.removeEventListener("mouseover",show);
+   </Script>   
+</body>
+</html>
+<!-- 
+    This method is used to remove handlers, with the same arguments given when the event was added..
+ -->

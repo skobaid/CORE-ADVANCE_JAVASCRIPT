@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        //Arrow Function is always anonymous(function without name)
+       document.write("<h1>Arrow Function in Javascript</h1>")
+
+        var my_fun = ()=> 
+        {
+            document.write("This is Arrow Function");
+        }
+        my_fun();
+        //....................arrow function with parameter..................//
+        //we can use,default,rest parameter etc in arrow function...
+        
+        document.write("<hr><h1>Arrow Function with parameter</h1>")
+
+        var my_fun = (a,b=30)=> 
+        {
+            document.write(a,"<br>");
+            document.write(b)
+        }
+        my_fun(10);
+
+        //without assigning in variable
+        //(a,b)=>a+b;
+        //..................immediately invoked function Expression(IIFE)........................//
+        //IIFE is js function which is run as soon as it is defined...
+        //we can't Access variable declared in iife function outside from it..
+        //IIFE is Self Executing Function
+        document.write("<hr><h1>Immediately Invoked Function</h1>");
+
+        (function(a,b){
+            document.write("<h2>This is IIFE Function</h2>");
+            document.write(a,"<br>")
+            document.write(b)
+        })(10,20);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EventFlow</title>
+    <style>
+        #one
+        {
+            height: 600px;
+            width: 600px;
+            background-color:gray;
+        }
+        #two
+        {
+            height: 500;
+            width: 500px;
+            background-color: cornflowerblue;
+        }
+        #three
+        {
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+        }
+        #four
+        {
+            height: 300px;
+            width: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Event Flow /Event Propagation</h1>
+    <h2>Event Capture and Bubbling</h2>
+
+    <div id="one">1
+        <div id="two">2
+            <div id="three">3
+                <div id="four">4   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //Bubbling Phase
+        // document.getElementById("one").addEventListener("click",function(){console.log("1")}, false);
+        // document.getElementById("two").addEventListener("click",function(){console.log("2"), false});
+        // document.getElementById("three").addEventListener("click",function(){console.log("3"), false});
+        // document.getElementById("four").addEventListener("click",function(){console.log("4"), false});
+
+        //Capturing Phase        
+        document.getElementById("one").addEventListener("click",function(){console.log("1")}, true);
+        document.getElementById("two").addEventListener("click",function(){console.log("2"), true});
+        document.getElementById("three").addEventListener("click",function(){console.log("3")}, true);
+        document.getElementById("four").addEventListener("click",function(){console.log("4"), true});
+        
+    </script>
+</body>
+</html>
+<!-- 
+    phases:=>
+    Capture Phase
+    Target Phase
+    Bubbling Phase
+ -->

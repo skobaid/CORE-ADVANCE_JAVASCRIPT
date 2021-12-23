@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append_Comment</title>
+</head>
+<body>
+    <div id ="myid">
+        <h1 id="myh1">We are learning Js</h1>
+        <h1>OBAID</h1>
+    </div>
+    <section id="mysec">
+    </section>
+    
+    <script>
+        document.write("<h1>....Append Comment Node....</h1>");
+
+        //Creating Comment Node
+        var new_comment= document.createComment("This is Comment Node");
+        
+
+        var targetnode = document.getElementById("myid"); //Get div in which we want to assign new_comment
+        //Append new_comment into <div id = "myid">
+        targetnode.appendChild(new_comment);
+
+        console.log(targetnode);
+
+    </script>
+</body>
+</html>

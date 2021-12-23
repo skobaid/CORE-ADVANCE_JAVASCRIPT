@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoveAttribute__hasAttribute</title>
+</head>
+<body something = "not-started">
+    <p id="myp" class="myclass" title="para">This is Paragraph</p>
+
+    <script>
+        document.write("<h1>RemoveAttribute and hasAttribute</h1>");
+
+        var p =document.getElementById("myp");
+
+        p.removeAttribute('title');
+        var isPresent = p.hasAttribute('para');     //hasAttribute
+        document.write(p.textContent);
+        console.log(isPresent);
+
+        //For styling
+        p.style.backgroundColor = "red";
+        p.style.fontSize = "50px";
+        p.style.fontStyle = "italic";
+
+        console.log(p);
+
+       alert(document.body.getAttribute('something')); // non-standard
+ 
+    </script>
+</body>
+</html>
+<!--
+    removeAttribute()=>This method is used to remove an attribute from the specified element.
+    syntax :-> element.removeAttribute(attributename);
+
+    hasAttribute():-> This attribute method returns a Boolean value indicating whether the specified
+    element has the specified attribute or not.(Attribute hai ya nahi ye check krne ke liye use karte ..)
+    syntax:-> var result = element.hasAttribute(attributeName);
+    Return True if attribute is present otherwise return false...
+-->

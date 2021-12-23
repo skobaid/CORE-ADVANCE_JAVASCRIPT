@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Behaviour of element</title>
+</head>
+<body>
+    <h1>How to Prevent Element Default Behaviour in Js </h1>
+    <h1>Event Methods</h1>
+
+    <div id="mydiv" style="width: 200px; height: 200px; background-color: burlywood;">
+         <a href="https://www.youtube.com/watch?v=_cN7H2bWKZQ&list=PLbGui_ZYuhihZ-pDxNZuQ7xOQ8IS2z3XI&index=93" id="mylink">
+        Click And Open youtube 
+        </a>
+    </div>
+
+    <script>
+        function stop(e)
+        {
+            //document.write("hlo");
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function div1()
+        {
+            this.style.backgroundColor = "orange";
+        }
+
+        var l = document.getElementById("mylink");
+
+        l.addEventListener("click",stop,false);
+
+        var div = document.getElementById("mydiv")
+        div.addEventListener("click", div1,false);
+    </script>
+</body>
+</html>
+<!-- 
+    preventDefault();=>This method tells the user agent that if the event does not get explicitly 
+    handled, its default action shuold not be taken as it normally would be..
+
+    Syntax:=>
+    e.preventDefault();
+ -->

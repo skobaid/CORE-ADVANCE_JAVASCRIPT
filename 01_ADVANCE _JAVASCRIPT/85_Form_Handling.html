@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormHandling</title>
+</head>
+<body>
+    <h1>Form Handling</h1>
+    <form action="" method="POST" name="myform" id="myfrm">
+
+    username :-<input type="text" name="uname" id=""><br><br>
+    Password :-<input type="password" name="pass" id=""><br><br>
+    <input type="submit" name="submit" id="">
+    
+    </form>
+
+    <hr><form action="" method="POST" name="yourform" id="ufrm">
+    
+     username :-<input type="text" name="uname" id=""><br><br>
+     Password :-<input type="password" name="pass" id=""><br><br>
+    <input type="submit" name="submit" id="">
+        
+    </form>
+
+    <script>
+        //=====================Accessing Form in Javascript=========================
+    
+        //With Index Number
+        // var myform = document.forms[1];
+        // console.log(myform);
+        //document.write(myform.innerHTML);
+
+        //with attribute name
+        // var frm = document.forms['yourform'];
+        // console.log(frm);
+
+        //with attribute with .
+        // var frm = document.forms.myform;
+        // console.log(frm);
+
+        //With getElementById
+        var frm = document.getElementById("ufrm");
+        console.log(frm);
+    </script>
+</body>
+</html>
+<!-- 
+    Js provides access to the forms within an html documnet through the form object known as HTMLFormElement in
+    the DOM. Which is a child of the documnet object.
+
+    It provides various way for accessing form
+
+   . document.forms[index_number]-It returns collection of form in the document.
+   . document.forms[name_attribute_value] -We can use name attribute of the form.
+   .document.forms.name_attribute_value..
+   .document.getElementByid("id");
+ -->

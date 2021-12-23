@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving_Window</title>
+</head>
+<body>
+    <h1>Moving Window In Javascript</h1>
+    <button type="button" id="openbtn">Open Window</button>
+    <button type="button" id="movebtn">Move Window</button>
+
+    <script>
+        var openwindow = document.getElementById("openbtn");
+        var movewindow = document.getElementById("movebtn");
+
+        var newwindow
+        function open_window()
+        {
+            newwindow = window.open("","_blank", "Width= 300, height=300");
+            newwindow.document.write("This is new window...");
+        }
+
+        function move_window()
+        {
+            // newwindow.moveBy(200,200);
+            newwindow.moveTo(200,200);
+
+            newwindow.focus();
+        }
+
+        openwindow.addEventListener("click",open_window);
+        movewindow.addEventListener("click", move_window);
+    </script>
+</body>
+</html>
+<!-- 
+    moveBy()
+    {
+        Thiis method moves the current window by a specified amount of pixels.
+        Syntax:- window.moveBy(horizontalPixels, verticalPixels);
+    }
+
+    moveTo();
+    This method moves the window to the specified co-ordinates.
+    syntax:=> window.moveTo(x,y) where, x is x-axis, y is y-axis..
+ -->

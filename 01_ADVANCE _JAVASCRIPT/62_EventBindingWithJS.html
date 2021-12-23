@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventBindingwithJs</title>
+</head>
+<body>
+
+    <button id="mybutton">ClickHere</button>
+
+    <script>
+        document.write("<h1>Event Binding with Js<h1>");
+        //Access Button with the help of id
+        var button = document.getElementById("mybutton");  // .onclick = show;
+
+        button.onclick =  function show()
+        {
+            document.write("This is Event Binding with Js");
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    EventBindingwithJs:=>
+    When we Use this approach we can add or remove handlers dynamically as well a it improves the sepration
+    between the structure of document and its logic and presentation.
+ -->

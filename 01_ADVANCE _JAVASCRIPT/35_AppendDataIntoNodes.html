@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Data into Text_Nodes</title>
+</head>
+<body>
+    <h2 id="myh">Hello Javascript</h2>
+    <script>
+        document.write("<h1>Append Data into TextNodes</h1>");
+
+        var h= document.getElementById("myh");
+        h.firstChild.appendData("...Python");     
+        console.log(h.firstChild.data);     
+    </script>
+</body>
+</html>
+
+<!--
+    This method is used to append the passed string to the end of the text node and comment node..
+    syntax:=>TextNode.appendData("string");
+-->

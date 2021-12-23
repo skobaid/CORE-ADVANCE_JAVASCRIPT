@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExceptionHandling</title>
+</head>
+<body>
+    <h1>Exception Handling</h1>
+
+    <script>
+       
+        try
+        {
+            add();
+            document.write("Skipped Code <br>");
+        }
+
+        catch(e)            //exception hone par hi ye block execute hoga otherwise it will not execute
+        {
+            // document.write("Message: "+  e.message + "<br>");
+            // document.write("Name: "+  e.name + "<br>");
+            // document.write("Stack: "+  e.stack + "<br>");
+            document.write("add() Function is not defined.. <br>");
+        }
+
+        finally     //it will be run chahe exception bane ya na bane 
+        {
+            document.write("Get Executed whether thier is exception or not..<br>");
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    Exception Handling:=>
+         An Exception is generealization of the concept of an error to include any unexpected condition
+         encountered during execution.
+         (Koi aisa code jiska output unExpected ho is case me exception Generate krta hai.)
+
+        =>try
+        =>Catch
+        =>finally
+        =>throw
+ -->

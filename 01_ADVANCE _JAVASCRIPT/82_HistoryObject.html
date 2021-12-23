@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object</title>
+</head>
+<body>
+    <h1>History Object </h1>
+    <script>
+        console.log(window.history.length);
+        //window.history.forward();
+        //window.history.back();
+        window.history.go(2);  //you can give negative value
+    </script>
+</body>
+</html>
+<!-- 
+    it is read only arrray of url string that show where the user has been recently.
+    property:=>lenght:- It returns the no of URls in the history list.
+
+    methods:=>back()->It loads the previous URL  in the history list.
+    for:ward():-> it loads the forward url in the history list.
+    go():=>It Access a particuar item in the history list relative to the current position.
+ -->

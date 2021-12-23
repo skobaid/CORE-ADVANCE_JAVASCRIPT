@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super_Method</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>Inheritance With Constructor Using Super()</h2><br>");
+
+        class Father
+        {
+            constructor(money)
+            {
+                this.fmoney = money;
+            }
+               showfmoney()
+               {
+                   return this.fmoney+ " is Father Money...<br>";
+               }
+        };
+
+        class Son extends Father
+        {
+            constructor(money)
+            {
+                super(money);
+                
+            }
+               showsmoney()
+               {
+                   return  " Son Money...";
+               }
+        };
+
+
+       var f =new Father();
+       var s=new Son(1000);
+       
+       document.write(s.showfmoney ());
+       document.write(s.showsmoney ());
+       
+    </script>
+    
+</body>
+</html>
